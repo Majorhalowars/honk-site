@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "honk-site.dll": "sha256-fIYE8sCnnaQ8oc\/9p8e8vp7UTRbLTmWZ1541kSrsvEU=",
+      "honk-site.dll": "sha256-CyMtPt\/HSShzfbfuwHy2mQSWUyjLdkaoa6hEw2\/LoYk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-OfPNI7UCQFv8hh2XtlZYzY7d9FFHfPRrmnF6aeXeork=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-LxZ7HJ8eLJ8fbfDHpXkGb9VhtdUfHxfLq7a9SmRxCiM=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-Ph2ZOl\/LOY2cCUG\/S2iA61YUWIsDlcAHFxzdTG43rPw=",
