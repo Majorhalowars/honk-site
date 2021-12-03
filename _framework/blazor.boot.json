@@ -2,12 +2,12 @@
   "cacheBootResources": true,
   "config": [ ],
   "debugBuild": false,
-  "entryAssembly": "honk-site",
+  "entryAssembly": "honksite",
   "icuDataMode": 0,
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "honk-site.dll": "sha256-iTlkQVB9JstysW1Cx6ojUx9g7T8M0FYTxq2zxwmPiEw=",
+      "honksite.dll": "sha256-Y+dXGk4+cXyPD8\/z0F\/Tfj1U2rF+sNH\/rUcMkDxPpao=",
       "Microsoft.AspNetCore.Components.dll": "sha256-93zrSYz0mWSirIYnPk+SB0gHzZeWz0DaPLUwFZGQUew=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-LxZ7HJ8eLJ8fbfDHpXkGb9VhtdUfHxfLq7a9SmRxCiM=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-Ph2ZOl\/LOY2cCUG\/S2iA61YUWIsDlcAHFxzdTG43rPw=",
@@ -35,7 +35,7 @@
       "System.Runtime.CompilerServices.Unsafe.dll": "sha256-lWLrP2SkeEtjbEdvnCokKxYOu+LNxC\/N+o9fErOPhWw=",
       "System.Runtime.dll": "sha256-yG+nl2XXVRCdsCa2PWqA++4kE5i0VhIQwyocSiZHWZY=",
       "System.Text.Encodings.Web.dll": "sha256-2si5LS8tRWuGqAH2WpDDgr3HLVXlthSj8Zuj8tdONAI=",
-      "System.Text.Json.dll": "sha256-1BK2o1LLY3rL+O+pZ8NNBcCuh2u5oTgKQA7q2NcN3ls="
+      "System.Text.Json.dll": "sha256-PBW4VeFEQdARCZzqIlr2766aOiwrGNfLKagVSvdJEm0="
     },
     "extensions": null,
     "lazyAssembly": null,
