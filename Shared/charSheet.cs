@@ -7,6 +7,6 @@ namespace honksite.Shared
     public class charSheet
     {
         public string name = "Name";
-        public string pronouns = "Pro/nouns";
+        public string pronouns = "Pronouns";
     }
 }

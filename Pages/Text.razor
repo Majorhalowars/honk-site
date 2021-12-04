@@ -2,6 +2,13 @@
 @using System.Text.Json
 
 <style>
+.outer-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.heading-container{
+}
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -34,19 +41,32 @@
 </style>
 
 <body>
-<div class="flex-container">
-  <h>
+  <div class="heading-container">
     <p style="text-align:left;">
     <input @bind="_playerSheet.name" />
     <span style="float:right;">
     <input @bind="_playerSheet.pronouns" />
     </span>
-    </p>
-  </h>
-  <div>1</div>
-  <h>wow</h>
-  <div>2</div>
-  <div>3</div>  
+    </p> 
+  </div>
+
+<div class="outer-container">
+    <div class="flex-container">
+        <h>
+            Hey hey people
+        </h>
+        <div>
+            bird here
+        </div>
+    </div>
+    <div class="flex-container">
+        <h>
+            back with another
+        </h>
+        <div>
+            bird call complilation
+        </div>
+    </div>
 </div>
 </body>
 
