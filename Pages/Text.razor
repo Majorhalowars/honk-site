@@ -1,12 +1,55 @@
 @page "/character-sheet"
 @using System.Text.Json
 
-<p>
-    <label>
-        <input @bind="_playerSheet.name" />
-        <input @bind="_playerSheet.pronouns" />
-    </label>
-</p>
+<style>
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c307f80-7abb-4aa4-bad6-32665664db84/ddc5ayl-3675a1aa-3d0f-4bf5-8fc7-b192184885d7.png/v1/fill/w_1280,h_854,q_80,strp/repeatable_crows___bigger_by_sabtastic_ddc5ayl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvM2MzMDdmODAtN2FiYi00YWE0LWJhZDYtMzI2NjU2NjRkYjg0XC9kZGM1YXlsLTM2NzVhMWFhLTNkMGYtNGJmNS04ZmM3LWIxOTIxODQ4ODVkNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HN6XivR34bNc5oDbMcjzAQ5ZOiy_MTHXwrv6jH7N2TQ");
+  background-color: rgb(28, 29, 34);
+}
+
+.flex-container > h {
+  background-color: rgb(28, 29, 34);
+  background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%););
+  margin: 10px;
+  padding: 20px;
+  line-height: 20px;
+  font-size: 30px;
+  color:ghostwhite;
+  text-align:left;
+}
+
+.flex-container > div {
+  background-color: rgba(34,40,49,.9);
+  width: 100px;
+  margin: 10px;
+  padding: 20px;
+  line-height: 75px;
+  font-size: 30px;
+  color:ghostwhite;
+  text-align: left;
+}
+
+</style>
+
+<body>
+<div class="flex-container">
+  <h>
+    <p style="text-align:left;">
+    <input @bind="_playerSheet.name" />
+    <span style="float:right;">
+    <input @bind="_playerSheet.pronouns" />
+    </span>
+    </p>
+  </h>
+  <div>1</div>
+  <h>wow</h>
+  <div>2</div>
+  <div>3</div>  
+</div>
+</body>
+
 
 <h2>Save/Load</h2>
 
