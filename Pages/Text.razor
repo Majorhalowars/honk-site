@@ -5,10 +5,20 @@
 .outer-container{
     display: flex;
     flex-direction: row;
+    width: 100%
 }
 
 .heading-container{
+  background-color: rgb(28, 29, 34);
+  background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%););
+  margin: 10px;
+  padding: 20px;
+  line-height: 20px;
+  font-size: 30px;
+  color: ghostwhite;
+  text-align: left;
 }
+
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -23,8 +33,8 @@
   padding: 20px;
   line-height: 20px;
   font-size: 30px;
-  color:ghostwhite;
-  text-align:left;
+  color: ghostwhite;
+  text-align: left;
 }
 
 .flex-container > div {
@@ -34,7 +44,7 @@
   padding: 20px;
   line-height: 75px;
   font-size: 30px;
-  color:ghostwhite;
+  color: ghostwhite;
   text-align: left;
 }
 
@@ -43,10 +53,10 @@
 <body>
   <div class="heading-container">
     <p style="text-align:left;">
-    <input @bind="_playerSheet.name" />
-    <span style="float:right;">
-    <input @bind="_playerSheet.pronouns" />
-    </span>
+        <input @bind="_playerSheet.name" />
+        <span style="float:right;">
+          <input @bind="_playerSheet.pronouns" />
+        </span>
     </p> 
   </div>
 
