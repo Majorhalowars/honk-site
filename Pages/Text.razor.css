@@ -6,7 +6,8 @@ button {
     background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
 
 }
-.heading-container input {
+
+input {
     color: #e6e6e6;
     background-color: #ffffff00;
     border: 1px solid #ffffff00;
@@ -15,10 +16,10 @@ button {
     text-align: inherit;
 }
 
-.heading-container input:hover {
+input:hover {
     border: 1px solid #ffffff00;
 }
 
-.heading-container textarea {
+textarea {
     font-size: 18px;
 }
