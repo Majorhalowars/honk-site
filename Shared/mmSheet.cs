@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace honksite.Shared
 {
-    public class charSheet
+    public class mmSheet
     {
         public string name = "Name";
         public string pronouns = "Pronouns";

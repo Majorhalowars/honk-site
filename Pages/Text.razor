@@ -1,63 +1,12 @@
 @page "/character-sheet"
 @using System.Text.Json
 
-<style>
- /* This is basically everything when it comes to the format. 
- Heading container is the topmost bar with the name and PL, 
- Outer container fits the rest of the flex boxes,
- And the flex containers are the columns
-*/
-
-.heading-container{
-    background-color: rgb(28, 29, 34);
-    background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%););
-    margin: 10px;
-    padding: 20px;
-    line-height: 20px;
-    font-size: 30px;
-    color: ghostwhite;
-    text-align: left;
-}
-
-.outer-container{
-    display: flex;
-    flex-direction: row;
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c307f80-7abb-4aa4-bad6-32665664db84/ddc5ayl-3675a1aa-3d0f-4bf5-8fc7-b192184885d7.png/v1/fill/w_1280,h_854,q_80,strp/repeatable_crows___bigger_by_sabtastic_ddc5ayl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvM2MzMDdmODAtN2FiYi00YWE0LWJhZDYtMzI2NjU2NjRkYjg0XC9kZGM1YXlsLTM2NzVhMWFhLTNkMGYtNGJmNS04ZmM3LWIxOTIxODQ4ODVkNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HN6XivR34bNc5oDbMcjzAQ5ZOiy_MTHXwrv6jH7N2TQ");
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent));
-    width: 100%;
-}
-
-.flex-container > h {
-    background-color: rgb(28, 29, 34);
-    background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
-    margin: 10px;
-    padding: 20px;
-    line-height: 20px;
-    font-size: 30px;
-    color: ghostwhite;
-    text-align: left;
-}
-
-.flex-container > div {
-    background-color: rgba(34,40,49,.9);
-    margin: 10px;
-    padding: 20px;
-    line-height: 75px;
-    font-size: 15px;
-    color: ghostwhite;
-    text-align: left;
-}
-
-</style>
+<div class="characterSheet"
 
 <!-- The topbar has the name and powerlevel -->
 <body>
-  <div class="heading-container">
+
+  <div class="containerHeading">
     <p style="text-align:left;">
         <input @bind="_playerSheet.name" />
         <span style="float:right;">
@@ -66,10 +15,10 @@
     </p> 
   </div>
 
-<div class="outer-container">
+<div class="containerShell">
 
 <!-- First Column includes stats, powerpoints, defenses, and offenses-->
-    <div class="flex-container">
+    <div class="containerSheet">
         <h>
             
         </h>
@@ -79,7 +28,7 @@
     </div>
 
 <!-- Second Column includes powers, equipment, advantages, and skills -->
-    <div class="flex-container">
+    <div class="containerSheet">
         <h>
             Powers
         </h>
@@ -110,7 +59,7 @@
     </div>
 
 <!-- Third Column includes the picture and complications text box-->
-    <div class="flex-container">
+    <div class="containerSheet">
         <img src="@_playerSheet.imageUrl" alt="Image of the character @_playerSheet.name." object-fit="cover" width="500px" height="500px">
         <input @bind="_playerSheet.imageUrl" inputmode="url"/>
         <h> 
@@ -121,15 +70,18 @@
         </div>
     </div>
 
+<!-- the containerShell div -->
 </div>
 </body>
+<!-- the characterSheet div -->
+</div>
 
 
 <h2>Save/Load</h2>
 
 <p>
     <label>
-    <input @bind="_saveLoadJson" color="#ff0000" />
+    <input @bind="_saveLoadJson" />
     <button @onclick="ExportToJson">[Export]</button>
     <button @onclick="ImportFromJson">[Import]</button>
     @_importError
@@ -139,9 +91,9 @@
 @_importError
 
 @code {
-    // General variable creation, the charSheet stuff is in the shared folder
+    // General variable creation, the mmSheet stuff is in the shared folder
 
-    private charSheet _playerSheet = new();
+    private mmSheet _playerSheet = new();
     private string _saveLoadJson = "";
     private string _importError = "";
 
@@ -151,13 +103,13 @@
     
     void ExportToJson()
     {
-        _saveLoadJson = JsonSerializer.Serialize(_playerSheet, typeof(charSheet), options);
+        _saveLoadJson = JsonSerializer.Serialize(_playerSheet, typeof(mmSheet), options);
     }
 
     void ImportFromJson()
     {
         try {
-            charSheet? _inputSheet = JsonSerializer.Deserialize<charSheet>(_saveLoadJson, options);
+            mmSheet? _inputSheet = JsonSerializer.Deserialize<mmSheet>(_saveLoadJson, options);
             if(_inputSheet is null) { 
                 return; 
             }
