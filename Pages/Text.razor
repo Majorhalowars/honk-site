@@ -2,13 +2,11 @@
 @using System.Text.Json
 
 <style>
-.outer-container{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c307f80-7abb-4aa4-bad6-32665664db84/ddc5ayl-3675a1aa-3d0f-4bf5-8fc7-b192184885d7.png/v1/fill/w_1280,h_854,q_80,strp/repeatable_crows___bigger_by_sabtastic_ddc5ayl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvM2MzMDdmODAtN2FiYi00YWE0LWJhZDYtMzI2NjU2NjRkYjg0XC9kZGM1YXlsLTM2NzVhMWFhLTNkMGYtNGJmNS04ZmM3LWIxOTIxODQ4ODVkNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HN6XivR34bNc5oDbMcjzAQ5ZOiy_MTHXwrv6jH7N2TQ");
-}
-
+ /* This is basically everything when it comes to the format. 
+ Heading container is the topmost bar with the name and PL, 
+ Outer container fits the rest of the flex boxes,
+ And the flex containers are the columns
+*/
 .heading-container{
     background-color: rgb(28, 29, 34);
     background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%););
@@ -20,16 +18,22 @@
     text-align: left;
 }
 
+.outer-container{
+    display: flex;
+    flex-direction: row;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c307f80-7abb-4aa4-bad6-32665664db84/ddc5ayl-3675a1aa-3d0f-4bf5-8fc7-b192184885d7.png/v1/fill/w_1280,h_854,q_80,strp/repeatable_crows___bigger_by_sabtastic_ddc5ayl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvM2MzMDdmODAtN2FiYi00YWE0LWJhZDYtMzI2NjU2NjRkYjg0XC9kZGM1YXlsLTM2NzVhMWFhLTNkMGYtNGJmNS04ZmM3LWIxOTIxODQ4ODVkNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HN6XivR34bNc5oDbMcjzAQ5ZOiy_MTHXwrv6jH7N2TQ");
+}
+
 .flex-container {
     display: flex;
     flex-direction: column;
     background-color: rgba(0,0,0,0));
+    width: 100%;
 }
 
 .flex-container > h {
     background-color: rgb(28, 29, 34);
     background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%););
-    width: 100%;
     margin: 10px;
     padding: 20px;
     line-height: 20px;
@@ -40,7 +44,6 @@
 
 .flex-container > div {
     background-color: rgba(34,40,49,.9);
-    width: 100%;
     margin: 10px;
     padding: 20px;
     line-height: 75px;
@@ -62,6 +65,8 @@
   </div>
 
 <div class="outer-container">
+
+<!-- First Column -->
     <div class="flex-container">
         <h>
             Hey hey people
@@ -70,6 +75,8 @@
             bird here
         </div>
     </div>
+
+<!-- Second Column -->
     <div class="flex-container">
         <h>
             back with another
@@ -77,6 +84,12 @@
         <div>
             bird call complilation
         </div>
+    </div>
+
+<!-- Third Column -->
+    <div class="flex-container">
+        <img src="@_playerSheet.imageUrl" alt="Image of the character @_playerSheet.Name.">
+        <input @bind="_playerSheet.imageUrl" inputmode="url"/>
     </div>
 </div>
 </body>
