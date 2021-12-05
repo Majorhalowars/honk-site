@@ -5,6 +5,22 @@ button[b-zyszw75eji] {
     border: none;
     background: none;
 }
+.heading-container input[b-zyszw75eji] {
+    color: #e6e6e6;
+    background-color: #ffffff00;
+    border: 1px solid #ffffff00;
+    font-size: inherit;
+    cursor: pointer;
+    text-align: inherit;
+}
+
+.heading-container input:hover[b-zyszw75eji] {
+    border: 1px solid #ffffff00;
+}
+
+.heading-container textarea[b-zyszw75eji] {
+    font-size: 18px;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-t8vz4dt82p] {
     position: relative;
