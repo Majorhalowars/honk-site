@@ -71,10 +71,10 @@
 <!-- First Column includes stats, powerpoints, defenses, and offenses-->
     <div class="flex-container">
         <h>
-            Powers
+            
         </h>
         <div>
-            <input @bind="_playerSheet.powers" />
+            
         </div>
     </div>
 
@@ -129,7 +129,7 @@
 
 <p>
     <label>
-    <input @bind="_saveLoadJson" />
+    <input @bind="_saveLoadJson" color="black" border-style="solid" border-width="thin"/>
     <button @onclick="ExportToJson">[Export]</button>
     <button @onclick="ImportFromJson">[Import]</button>
     @_importError
