@@ -74,7 +74,7 @@ a, .btn-link {
 
 .containerHeading{
     background-color: rgb(28, 29, 34);
-    background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%););
+    background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
     margin: 10px;
     padding: 20px;
     line-height: 20px;
@@ -92,7 +92,7 @@ a, .btn-link {
 .containerSheet {
     display: flex;
     flex-direction: column;
-    background-color: transparent));
+    background-color: transparent;
     width: 100%;
 }
 
