@@ -65,12 +65,9 @@ a, .btn-link {
 
 input {
     color: #e6e6e6;
-    background-color: #242C37;
+    background-color: transparent;
     font-size: inherit;
     cursor: pointer;
     text-align: inherit;
-}
-
-.flex-container input:hover {
-    border: 1px solid #ffffff00;
+    border: none;
 }
