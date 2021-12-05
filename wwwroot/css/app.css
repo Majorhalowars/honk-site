@@ -63,7 +63,7 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
-.input {
+input {
     color: #e6e6e6;
     background-color: #ffffff00;
     font-size: inherit;
