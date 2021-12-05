@@ -7,7 +7,8 @@ button[b-zyszw75eji] {
     background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
 
 }
-.heading-container input[b-zyszw75eji] {
+
+input[b-zyszw75eji] {
     color: #e6e6e6;
     background-color: #ffffff00;
     border: 1px solid #ffffff00;
@@ -16,11 +17,11 @@ button[b-zyszw75eji] {
     text-align: inherit;
 }
 
-.heading-container input:hover[b-zyszw75eji] {
+input:hover[b-zyszw75eji] {
     border: 1px solid #ffffff00;
 }
 
-.heading-container textarea[b-zyszw75eji] {
+textarea[b-zyszw75eji] {
     font-size: 18px;
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
