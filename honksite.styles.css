@@ -1,29 +1,3 @@
-/* /Pages/Text.razor.rz.scp.css */
-button[b-zyszw75eji] {
-    font-family: "Poiret One", 'Times New Roman', Arial, sans-serif;
-    font-weight: 800;
-    border: none;
-    background-color: rgb(28, 29, 34);
-    background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
-
-}
-
-input[b-zyszw75eji] {
-    color: #e6e6e6;
-    background-color: #ffffff00;
-    border: 1px solid #ffffff00;
-    font-size: inherit;
-    cursor: pointer;
-    text-align: inherit;
-}
-
-input:hover[b-zyszw75eji] {
-    border: 1px solid #ffffff00;
-}
-
-textarea[b-zyszw75eji] {
-    font-size: 18px;
-}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-t8vz4dt82p] {
     position: relative;

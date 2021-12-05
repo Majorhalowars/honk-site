@@ -62,3 +62,21 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+.heading-container input {
+    color: #e6e6e6;
+    background-color: #ffffff00;
+    border: 1px solid #ffffff00;
+    font-size: inherit;
+    cursor: pointer;
+    text-align: inherit;
+}
+
+.heading-container input:hover {
+    border: 1px solid #ffffff00;
+}
+
+.flex-container div {
+    font-size: 18px;
+    color: #e6e6e6;
+}
