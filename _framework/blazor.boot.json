@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "honksite.dll": "sha256-AZ5FVWP57kM3\/00cVeLzmRvV7vTXvKBoRbtOjw6oPPY=",
+      "honksite.dll": "sha256-T9JAfahaA+qdLrYIl83nGP+zZ8AWrTqi\/ew0D5HkNlk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-93zrSYz0mWSirIYnPk+SB0gHzZeWz0DaPLUwFZGQUew=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-LxZ7HJ8eLJ8fbfDHpXkGb9VhtdUfHxfLq7a9SmRxCiM=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-Ph2ZOl\/LOY2cCUG\/S2iA61YUWIsDlcAHFxzdTG43rPw=",
