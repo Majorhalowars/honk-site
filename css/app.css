@@ -116,13 +116,3 @@ a, .btn-link {
     color: ghostwhite;
     text-align: left;
 }
-
-
-input {
-    color: #e6e6e6;
-    background-color: transparent;
-    font-size: inherit;
-    cursor: pointer;
-    text-align: inherit;
-    border: none;
-}
