@@ -4,3 +4,19 @@ button {
     border: none;
     background: none;
 }
+.heading-container input {
+    color: #e6e6e6;
+    background-color: #ffffff00;
+    border: 1px solid #ffffff00;
+    font-size: inherit;
+    cursor: pointer;
+    text-align: inherit;
+}
+
+.heading-container input:hover {
+    border: 1px solid #ffffff00;
+}
+
+.heading-container textarea {
+    font-size: 18px;
+}
