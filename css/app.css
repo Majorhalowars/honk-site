@@ -128,7 +128,9 @@ a, .btn-link {
     text-align: center;
     margin: 10px;
     width: 100px;
+    height: 80px;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 /* When the screen pixel width is 800 or smaller, it becomes a column */
