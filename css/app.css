@@ -122,12 +122,19 @@ a, .btn-link {
 
 /* Used exclusively for the stats due to formatting */
 
+.containerStatShell {
+    background-color: transparent;
+    color: ghostwhite;
+    flex-direction: row;  
+}
+
 .containerStats {
     background-color: rgba(34,40,49,.9);
     color: ghostwhite;
     text-align: center;
     width: 100px;
     height: 80px;
+    margin: 5px;
     flex-direction: row;
 }
 
@@ -137,6 +144,5 @@ a, .btn-link {
     .containerShell {
         flex-direction: column;
         padding-bottom: 10px;
-
     }
 }
