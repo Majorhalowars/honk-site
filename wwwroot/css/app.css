@@ -92,7 +92,7 @@ a, .btn-link {
     display: flex;
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c307f80-7abb-4aa4-bad6-32665664db84/ddc5ayl-3675a1aa-3d0f-4bf5-8fc7-b192184885d7.png/v1/fill/w_1280,h_854,q_80,strp/repeatable_crows___bigger_by_sabtastic_ddc5ayl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvM2MzMDdmODAtN2FiYi00YWE0LWJhZDYtMzI2NjU2NjRkYjg0XC9kZGM1YXlsLTM2NzVhMWFhLTNkMGYtNGJmNS04ZmM3LWIxOTIxODQ4ODVkNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HN6XivR34bNc5oDbMcjzAQ5ZOiy_MTHXwrv6jH7N2TQ");
     min-height: 800px;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .containerColumn {
@@ -128,6 +128,7 @@ a, .btn-link {
     text-align: center;
     flex: max-content;
     margin: 10px;
+    flex-grow: 1;
 }
 
 /* When the screen pixel width is 800 or smaller, it becomes a column */
@@ -136,4 +137,6 @@ a, .btn-link {
     .containerShell {
         flex-direction: column;
         padding-bottom: 10px;
+
     }
+}
