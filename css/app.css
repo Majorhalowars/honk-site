@@ -126,10 +126,8 @@ a, .btn-link {
     background-color: rgba(34,40,49,.9);
     color: ghostwhite;
     text-align: center;
-    margin: 10px;
     width: 100px;
     height: 80px;
-    flex-wrap: wrap;
     flex-direction: row;
 }
 
