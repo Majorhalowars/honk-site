@@ -123,12 +123,15 @@ a, .btn-link {
 /* Used exclusively for the stats due to formatting */
 
 .containerStatShell {
+    display: flex;
     background-color: transparent;
     color: ghostwhite;
-    flex-direction: row;  
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .containerStats {
+    display: flex;
     background-color: rgba(34,40,49,.9);
     color: ghostwhite;
     text-align: center;
@@ -136,6 +139,7 @@ a, .btn-link {
     height: 80px;
     margin: 5px;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /* When the screen pixel width is 800 or smaller, it becomes a column */
