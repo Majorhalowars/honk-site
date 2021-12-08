@@ -25,7 +25,7 @@
         @foreach (string stat in _playerSheet.stats.Keys) {
             <div class="containerStats">
                 <p>@stat</p>
-                </p><input @bind='_playerSheet.stats[stat]' style="width: 30px; text-align: center" maxlength="2" inputmode="numeric"/></p>
+                <p><input @bind='_playerSheet.stats[stat]' style="width: 30px; text-align: center" maxlength="2" inputmode="numeric"/></p>
             </div>
         }
     </div>
