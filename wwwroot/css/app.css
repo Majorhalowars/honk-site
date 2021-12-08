@@ -94,18 +94,25 @@ a, .btn-link {
     min-height: 800px;
 }
 
-.containerSheet {
+.containerColumn {
     display: flex;
     flex: max-content;
     flex-direction: column;
     background-color: transparent;
     min-width: 33.3%;
-    padding: 10px
-    margin: 10px;
+    padding: 10px;
+    gap: 10px;
     text-align: left;
     color: ghostwhite;
     border-bottom: 8px double ghostwhite;
 }
+
+/* When the screen pixel width is 800 or smaller, it becomes a column */
+@media (max-width: 800px) {
+    .containerColumn {
+      flex-direction: column;
+    }
+  }
 
 /* Used for the heading sections of the sheet */
 .containerSheet > h {
@@ -116,7 +123,7 @@ a, .btn-link {
 }
 
 /* Used for the body sections of the sheet */
-.containerSheet > div {
+.containerSheet > p {
     background-color: rgba(34,40,49,.9);
     line-height: 75px;
 
@@ -129,4 +136,5 @@ a, .btn-link {
     color: ghostwhite;
     text-align: center;
     flex: max-content;
+    margin: 10px;
 }

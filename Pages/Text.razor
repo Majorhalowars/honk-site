@@ -18,7 +18,7 @@
 <div class="containerShell">
 
 <!-- First Column includes stats, powerpoints, defenses, and offenses-->
-    <div class="containerSheet">
+    <div class="containerColumn">
         <h>
             Stats
         </h>
@@ -31,46 +31,46 @@
     </div>
 
 <!-- Second Column includes powers, equipment, advantages, and skills -->
-    <div class="containerSheet">
+    <div class="containerColumn">
         <h>
             Powers
         </h>
-        <div>
+        <p>
             <input @bind="_playerSheet.powers" />
-        </div>
+        </p>
 
         <h>
             Equipment
         </h>
-        <div>
+        <p>
             <input @bind="_playerSheet.equipment" />
-        </div>
+        </p>
 
         <h>
             Advantages
         </h>
-        <div>
+        <p>
             <input @bind="_playerSheet.advantages" />
-        </div>
+        </p>
 
         <h>
             Skills
         </h>
-        <div>
+        <p>
             <input @bind="_playerSheet.skills" />
-        </div>
+        </p>
     </div>
 
 <!-- Third Column includes the picture and complications text box-->
-    <div class="containerSheet">
+    <div class="containerColumn">
         <img src="@_playerSheet.imageUrl" alt="Image of the character @_playerSheet.name." object-fit="cover" width="500px" height="500px" margin="auto">
         <input @bind="_playerSheet.imageUrl" inputmode="url"/>
         <h> 
             Complications
         </h>
-        <div>
+        <p>
             <input @bind="_playerSheet.complications" />
-        </div>
+        </p>
     </div>
 
 <!-- the containerShell div -->
