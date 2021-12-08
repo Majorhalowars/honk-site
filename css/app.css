@@ -109,24 +109,21 @@ a, .btn-link {
 
 /* When the screen pixel width is 800 or smaller, it becomes a column */
 @media (max-width: 800px) {
-    .containerColumn {
-      flex-direction: column;
+    .containerShell {
+        flex-direction: column;
+        padding-bottom: 10px;
     }
-  }
 
 /* Used for the heading sections of the sheet */
-.containerSheet > h {
+.containerColumn > h {
     background-color: rgb(28, 29, 34);
     background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
-    line-height: 20px;
     font-size: 30px;
 }
 
 /* Used for the body sections of the sheet */
-.containerSheet > p {
+.containerColumn > p {
     background-color: rgba(34,40,49,.9);
-    line-height: 75px;
-
 }
 
 /* Used exclusively for the stats due to formatting */
