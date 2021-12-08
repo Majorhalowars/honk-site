@@ -77,7 +77,7 @@ a, .btn-link {
     border: none;
 }
 
-.containerHeading{
+.containerHeading {
     background-color: rgb(28, 29, 34);
     background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
     margin: 10px;
@@ -88,35 +88,45 @@ a, .btn-link {
     text-align: left;
 }
 
-.containerShell{
+.containerShell {
     display: flex;
-    flex-direction: row;
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c307f80-7abb-4aa4-bad6-32665664db84/ddc5ayl-3675a1aa-3d0f-4bf5-8fc7-b192184885d7.png/v1/fill/w_1280,h_854,q_80,strp/repeatable_crows___bigger_by_sabtastic_ddc5ayl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvM2MzMDdmODAtN2FiYi00YWE0LWJhZDYtMzI2NjU2NjRkYjg0XC9kZGM1YXlsLTM2NzVhMWFhLTNkMGYtNGJmNS04ZmM3LWIxOTIxODQ4ODVkNy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.HN6XivR34bNc5oDbMcjzAQ5ZOiy_MTHXwrv6jH7N2TQ");
+    min-height: 800px;
 }
 
 .containerSheet {
     display: flex;
+    flex: max-content;
     flex-direction: column;
     background-color: transparent;
-    width: 100%;
+    min-width: 33.3%;
+    padding: 10px
+    margin: 10px;
+    text-align: left;
+    color: ghostwhite;
+    border-bottom: 8px double ghostwhite;
 }
 
+/* Used for the heading sections of the sheet */
 .containerSheet > h {
     background-color: rgb(28, 29, 34);
     background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
-    margin: 10px;
-    padding: 20px;
     line-height: 20px;
     font-size: 30px;
-    color: ghostwhite;
-    text-align: left;
 }
 
+/* Used for the body sections of the sheet */
 .containerSheet > div {
     background-color: rgba(34,40,49,.9);
-    margin: 10px;
-    padding: 20px;
     line-height: 75px;
+
+}
+
+/* Used exclusively for the stats due to formatting */
+
+.containerStats {
+    background-color: rgba(34,40,49,.9);
     color: ghostwhite;
-    text-align: left;
+    text-align: center;
+    flex: max-content;
 }
