@@ -130,3 +130,9 @@ a, .btn-link {
     flex: max-content;
     margin: 10px;
 }
+
+@media (max-width: 800px) {
+    .containerShell {
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
