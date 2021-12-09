@@ -9,7 +9,7 @@ namespace honksite.Shared
         public string name = "Name";
         public string powerLevel = "PL";
         public string imageUrl = "https://art.ngfiles.com/images/2110000/2110060_sabtastic_kenku-wizard-commission.png?f1633212952";
-        public List<string> powers = "";
+        public List<string> powers = new();
         public string equipment = "";
         public string advantages = "";
         public string skills = "";
