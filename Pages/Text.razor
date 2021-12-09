@@ -10,7 +10,7 @@
     <p style="text-align:left;">
         <input @bind="_playerSheet.name" />
         <span style="float:right;">
-          <input @bind="_playerSheet.pronouns" />
+          <input @bind="_playerSheet.powerLevel" />
         </span>
     </p> 
   </div>
@@ -43,7 +43,27 @@
             Powers
         </h>
         <p>
-            <input @bind="_playerSheet.powers" />
+            <table>
+                <tr>
+                    <td>
+                        <button @onclick="AddPower">[✓]</button>
+                    </td>
+                    <td>
+                        <input @bind="_newPowerText" style="border: none; width: 100%"/>
+                    </td>
+                </tr>
+
+                @foreach (string item in _playerSheet.powers) {
+                    <tr>
+                        <td>
+                            <button @onclick="() => RemovePower(item)">[🞪]</button>
+                        </td>
+                        <td>
+                            @item
+                        </td>
+                    </tr>
+                }
+            </table>
         </p>
 
         <h>
@@ -128,5 +148,23 @@
         catch (JsonException e) {
             _importError = e.Message;
         }
+    }
+
+
+    // hoo boy, here's all the input box stuff. Starting with making new variables
+    private string _newPowerText = "";
+
+    // removal code
+
+        private void RemovePower(string target)
+    {
+        _playerSheet.powers.Remove(target);
+    }
+
+    // addition code
+
+        private void AddPower()
+    {
+        _playerSheet.powers.Add(_newPowerText);
     }
 }
