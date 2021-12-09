@@ -130,7 +130,7 @@
                         <button @onclick="AddSkill">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newSkillText" style="border: border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newSkillText" style="border: dimgray 1px solid; width: 100%"/>
                     </td>
                 </tr>
 
@@ -151,12 +151,12 @@
 <!-- Third Column includes the picture and complications text box-->
     <div class="containerColumn">
         <img src="@_playerSheet.imageUrl" alt="Image of the character @_playerSheet.name." object-fit="cover" width="500px" height="500px" margin="auto">
-        <input @bind="_playerSheet.imageUrl" inputmode="url"/>
+        <input @bind="_playerSheet.imageUrl" inputmode="url" style="border: dimgray 1px solid; background-color: rgba(34,40,49,.9);"/>
         <h> 
             Complications
         </h>
         <p>
-            <input @bind="_playerSheet.complications" />
+            <textarea @bind="_playerSheet.complications" style="width: 100%"></textarea>
         </p>
     </div>
 
