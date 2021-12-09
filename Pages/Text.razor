@@ -26,7 +26,7 @@
         @foreach (string stat in _playerSheet.stats.Keys) {
             <div class="containerStats">
                 <p>@stat</p>
-                <hr>
+
                 <p><input @bind='_playerSheet.stats[stat]' style="width: 30px; text-align: center" maxlength="2" inputmode="numeric"/></p>
             </div>
             }
@@ -49,7 +49,7 @@
                         <button @onclick="AddPower">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newPowerText" style="border: none; width: 100%"/>
+                        <input @bind="_newPowerText" style="border: border: dimgray 1px solid; width: 100%"/>
                     </td>
                 </tr>
 
@@ -70,21 +70,81 @@
             Equipment
         </h>
         <p>
-            <input @bind="_playerSheet.equipment" />
+            <table>
+                <tr>
+                    <td>
+                        <button @onclick="AddEquipment">[✓]</button>
+                    </td>
+                    <td>
+                        <input @bind="_newEquipmentText" style="border: border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+
+                @foreach (string item in _playerSheet.equipment) {
+                    <tr>
+                        <td>
+                            <button @onclick="() => RemoveEquipment(item)">[🞪]</button>
+                        </td>
+                        <td>
+                            @item
+                        </td>
+                    </tr>
+                }
+            </table>
         </p>
 
         <h>
             Advantages
         </h>
         <p>
-            <input @bind="_playerSheet.advantages" />
+            <table>
+                <tr>
+                    <td>
+                        <button @onclick="AddAdvantage">[✓]</button>
+                    </td>
+                    <td>
+                        <input @bind="_newAdvantageText" style="border: border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+
+                @foreach (string item in _playerSheet.advantages) {
+                    <tr>
+                        <td>
+                            <button @onclick="() => RemoveAdvantage(item)">[🞪]</button>
+                        </td>
+                        <td>
+                            @item
+                        </td>
+                    </tr>
+                }
+            </table>
         </p>
 
         <h>
             Skills
         </h>
         <p>
-            <input @bind="_playerSheet.skills" />
+            <table>
+                <tr>
+                    <td>
+                        <button @onclick="AddSkill">[✓]</button>
+                    </td>
+                    <td>
+                        <input @bind="_newSkillText" style="border: border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+
+                @foreach (string item in _playerSheet.skills) {
+                    <tr>
+                        <td>
+                            <button @onclick="() => RemoveSkill(item)">[🞪]</button>
+                        </td>
+                        <td>
+                            @item
+                        </td>
+                    </tr>
+                }
+            </table>
         </p>
     </div>
 
@@ -151,9 +211,11 @@
     }
 
 
-    // hoo boy, here's all the input box stuff. Starting with making new variables
+    // hoo boy, here's all the input box stuff. Starting with making new variables. This is what'll display in the empty slot
     private string _newPowerText = "";
-
+    private string _newEquipmentText = "";
+    private string _newAdvantageText = "";
+    private string _newSkillText = "";
     // removal code
 
         private void RemovePower(string target)
@@ -161,10 +223,40 @@
         _playerSheet.powers.Remove(target);
     }
 
+        private void RemoveEquipment(string target)
+    {
+        _playerSheet.equipment.Remove(target);
+    }
+
+        private void RemoveAdvantage(string target)
+    {
+        _playerSheet.advantages.Remove(target);
+    }
+
+    private void RemoveSkill(string target)
+    {
+        _playerSheet.skills.Remove(target);
+    }
+
     // addition code
 
         private void AddPower()
     {
         _playerSheet.powers.Add(_newPowerText);
+    }
+
+        private void AddEquipment()
+    {
+        _playerSheet.equipment.Add(_newEquipmentText);
+    }
+
+        private void AddAdvantage()
+    {
+        _playerSheet.advantages.Add(_newAdvantageText);
+    }
+
+    private void AddSkill()
+    {
+        _playerSheet.skills.Add(_newSkillText);
     }
 }
