@@ -15,7 +15,7 @@ namespace honksite.Shared
         public List<string> skills = new();
         public string complications = "";
         public Dictionary<string, int> stats = new() { { "Strength", 0 }, { "Agilty", 0 }, { "Fighting", 0 }, { "Awareness", 0 }, { "Stamina", 0 }, { "Dexterity", 0 }, { "Intellect", 0 }, { "Presence", 0 } };
-        public Dictionary<string, int> defenses = new() { { "Dodge", 0 } };
+        public Dictionary<string, int> defenses = new() { { "Dodge", 0 }, { "Fortitude", 0} };
         
         }
 }
