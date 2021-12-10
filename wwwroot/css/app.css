@@ -148,6 +148,10 @@ a, .btn-link {
     border-bottom: 1px solid grey;
 }
 
+.character-display input:hover {
+    border: 1px solid grey;
+}
+
 /* When the screen pixel width is 800 or smaller, it becomes a column */
 
 @media (max-width: 800px) {

@@ -31,7 +31,7 @@
             <div class="containerStats">
                 <p style="text-align: center; width: 100%;">@stat</p>
 
-                <p><input @bind='_playerSheet.stats[stat]' style="border: dimgray 1px solid; width: 100%; text-align: center" maxlength="2" inputmode="numeric"/></p>
+                <p><input @bind='_playerSheet.stats[stat]' style="border: none; width: 100%; text-align: center" maxlength="2" inputmode="numeric"/></p>
             </div>
             }
         </div>
@@ -40,14 +40,14 @@
             Offense
         </h>
         <p>
-            Initiative <input @bind='_playerSheet.initiative' style="border: dimgray 1px solid;" maxlength="2" inputmode="numeric"/>
+            Initiative <input @bind='_playerSheet.initiative' style="border: none;" maxlength="2" inputmode="numeric"/>
             <table style="padding-left: 10px">
                 <tr>
                     <td>
                         <button @onclick="AddOffense">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newOffenseText" style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newOffenseText" style="border: none; width: 100%"/>
                     </td>
                 </tr>
 
@@ -75,13 +75,13 @@
                         Dodge
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Dodge"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.defenses["Dodge"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td> 
                         Fortitude
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Fortitude"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.defenses["Fortitude"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
                 <tr>
@@ -89,13 +89,13 @@
                         Parry
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Parry"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.defenses["Parry"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td> 
                         Toughness
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Toughness"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.defenses["Toughness"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
                 <tr>
@@ -103,7 +103,7 @@
                         Will
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Will"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.defenses["Will"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
             </table>
@@ -119,13 +119,13 @@
                         Abilities
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Abilities"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.spentPoints["Abilities"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td> 
                         Skills
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Skills"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.spentPoints["Skills"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
                 <tr>
@@ -133,13 +133,13 @@
                         Parry
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Powers"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.spentPoints["Powers"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td> 
                         Toughness
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Defenses"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.spentPoints["Defenses"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
                 <tr>
@@ -147,13 +147,13 @@
                         Advantages
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Advantages"]' style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind='_playerSheet.spentPoints["Advantages"]' style="border: none; width: 100%" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td>
                         Total
                     </td>
                     <td>
-
+                        TO BE ADDED (probably)
                     </td>
                 </tr>
             </table>
@@ -172,7 +172,7 @@
                         <button @onclick="AddPower">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newPowerText" style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newPowerText" style="border: none; width: 100%"/>
                     </td>
                 </tr>
 
@@ -199,7 +199,7 @@
                         <button @onclick="AddEquipment">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newEquipmentText" style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newEquipmentText" style="border: none; width: 100%"/>
                     </td>
                 </tr>
 
@@ -226,7 +226,7 @@
                         <button @onclick="AddAdvantage">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newAdvantageText" style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newAdvantageText" style="border: none; width: 100%"/>
                     </td>
                 </tr>
 
@@ -253,7 +253,7 @@
                         <button @onclick="AddSkill">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newSkillText" style="border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newSkillText" style="border: none; width: 100%"/>
                     </td>
                 </tr>
 
