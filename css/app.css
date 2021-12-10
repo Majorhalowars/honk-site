@@ -105,7 +105,7 @@ a, .btn-link {
     text-align: left;
     color: ghostwhite;
     border-bottom: 8px double ghostwhite;
-    margin-left: 10px;
+    padding-left: 10px;
 }
 
 /* Used for the heading sections of the sheet */
@@ -113,13 +113,12 @@ a, .btn-link {
     background-color: rgb(28, 29, 34);
     background-image: linear-gradient(to right, rgb(5, 39, 103) 0%, #3a0647 70%);
     font-size: 30px;
-    padding: 10px;
+    padding-left: 10px;
 }
 
 /* Used for the body sections of the sheet */
 .containerColumn > p {
     background-color: rgba(34,40,49,.9);
-    padding: 10px;
 }
 
 /* Used exclusively for the stats due to formatting */
