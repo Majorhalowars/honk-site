@@ -31,7 +31,7 @@
             <div class="containerStats">
                 <p style="text-align: center; width: 100%;">@stat</p>
 
-                <p><input @bind='_playerSheet.stats[stat]' style="border: border: dimgray 1px solid; width: 100%; text-align: center" maxlength="2" inputmode="numeric"/></p>
+                <p><input @bind='_playerSheet.stats[stat]' style="border: dimgray 1px solid; width: 100%; text-align: center" maxlength="2" inputmode="numeric"/></p>
             </div>
             }
         </div>
@@ -39,6 +39,24 @@
         <h>
             Power Points
         </h>
+        <p>
+            <table>
+                <tr>
+                    <td> 
+                        Dodge
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.defenses["Dodge"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                    <td> 
+                        Fortitude
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.defenses["Fortitude"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+            </table>
+        </p>
     </div>
 
 <!-- Second Column includes powers, equipment, advantages, and skills -->
@@ -53,7 +71,7 @@
                         <button @onclick="AddPower">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newPowerText" style="border: border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newPowerText" style="border: dimgray 1px solid; width: 100%"/>
                     </td>
                 </tr>
 
@@ -80,7 +98,7 @@
                         <button @onclick="AddEquipment">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newEquipmentText" style="border: border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newEquipmentText" style="border: dimgray 1px solid; width: 100%"/>
                     </td>
                 </tr>
 
@@ -107,7 +125,7 @@
                         <button @onclick="AddAdvantage">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newAdvantageText" style="border: border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newAdvantageText" style="border: dimgray 1px solid; width: 100%"/>
                     </td>
                 </tr>
 
@@ -134,7 +152,7 @@
                         <button @onclick="AddSkill">[✓]</button>
                     </td>
                     <td>
-                        <input @bind="_newSkillText" style="border: border: dimgray 1px solid; width: 100%"/>
+                        <input @bind="_newSkillText" style="border: dimgray 1px solid; width: 100%"/>
                     </td>
                 </tr>
 
