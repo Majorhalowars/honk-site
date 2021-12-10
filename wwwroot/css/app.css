@@ -105,7 +105,6 @@ a, .btn-link {
     text-align: left;
     color: ghostwhite;
     border-bottom: 8px double ghostwhite;
-    padding-left: 10px;
 }
 
 /* Used for the heading sections of the sheet */
@@ -119,6 +118,7 @@ a, .btn-link {
 /* Used for the body sections of the sheet */
 .containerColumn > p {
     background-color: rgba(34,40,49,.9);
+    padding-left: 10px;
 }
 
 /* Used exclusively for the stats due to formatting */

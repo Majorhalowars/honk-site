@@ -40,7 +40,7 @@
             Offense
         </h>
         <p>
-            Initiative <input @bind='_playerSheet.initiative' style="border: dimgray 1px solid; width: 100%; text-align: center" maxlength="2" inputmode="numeric"/>
+            Initiative <input @bind='_playerSheet.initiative' style="border: dimgray 1px solid;" maxlength="2" inputmode="numeric"/>
             <table>
                 <tr>
                     <td>
@@ -104,6 +104,56 @@
                     </td>
                     <td> 
                         <input @bind='_playerSheet.defenses["Will"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+            </table>
+        </p>
+
+        <h>
+            Points Spent
+        </h>
+        <p>
+            <table>
+                <tr>
+                    <td> 
+                        Abilities
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.spentPoints["Abilities"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                    <td> 
+                        Skills
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.spentPoints["Skills"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        Parry
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.spentPoints["Powers"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                    <td> 
+                        Toughness
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.spentPoints["Defenses"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        Advantages
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.spentPoints["Advantages"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                    <td>
+                        Total
+                    </td>
+                    <td>
+
                     </td>
                 </tr>
             </table>
