@@ -105,6 +105,7 @@ a, .btn-link {
     text-align: left;
     color: ghostwhite;
     border-bottom: 8px double ghostwhite;
+    margin-left: 10px;
 }
 
 /* Used for the heading sections of the sheet */
