@@ -21,7 +21,7 @@
 
 <div class="containerShell">
 
-<!-- First Column includes stats, powerpoints, defenses, and offenses-->
+<!-- First Column includes stats, powerpoints, defenses, and offense -->
     <div class="containerColumn">
         <h>
             Stats
@@ -37,7 +37,36 @@
         </div>
 
         <h>
-            Power Points
+            Offense
+        </h>
+        <p>
+            Initiative <input @bind='_playerSheet.initative' style="border: dimgray 1px solid; width: 100%; text-align: center" maxlength="2" inputmode="numeric"/>
+            <table>
+                <tr>
+                    <td>
+                        <button @onclick="AddOffense">[✓]</button>
+                    </td>
+                    <td>
+                        <input @bind="_newOffenseText" style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+
+                @foreach (string item in _playerSheet.offense) {
+                    <tr>
+                        <td>
+                            <button @onclick="() => RemoveOffense(item)">[🞪]</button>
+                        </td>
+                        <td>
+                            @item
+                        </td>
+                    </tr>
+                }
+            </table>
+        </p>
+
+
+        <h>
+            Defense
         </h>
         <p>
             <table>
@@ -53,6 +82,28 @@
                     </td>
                     <td> 
                         <input @bind='_playerSheet.defenses["Fortitude"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        Parry
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.defenses["Parry"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                    <td> 
+                        Toughness
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.defenses["Toughness"]' style="border: dimgray 1px solid; width: 100%"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        Will
+                    </td>
+                    <td> 
+                        <input @bind='_playerSheet.defenses["Will"]' style="border: dimgray 1px solid; width: 100%"/>
                     </td>
                 </tr>
             </table>
@@ -238,19 +289,20 @@
     private string _newEquipmentText = "";
     private string _newAdvantageText = "";
     private string _newSkillText = "";
+    private string _newOffenseText = "";
     // removal code
 
-        private void RemovePower(string target)
+    private void RemovePower(string target)
     {
         _playerSheet.powers.Remove(target);
     }
 
-        private void RemoveEquipment(string target)
+    private void RemoveEquipment(string target)
     {
         _playerSheet.equipment.Remove(target);
     }
 
-        private void RemoveAdvantage(string target)
+    private void RemoveAdvantage(string target)
     {
         _playerSheet.advantages.Remove(target);
     }
@@ -260,19 +312,24 @@
         _playerSheet.skills.Remove(target);
     }
 
+    private void RemoveOffense(string target)
+    {
+        _playerSheet.skills.Remove(target);
+    }
+
     // addition code
 
-        private void AddPower()
+    private void AddPower()
     {
         _playerSheet.powers.Add(_newPowerText);
     }
 
-        private void AddEquipment()
+    private void AddEquipment()
     {
         _playerSheet.equipment.Add(_newEquipmentText);
     }
 
-        private void AddAdvantage()
+    private void AddAdvantage()
     {
         _playerSheet.advantages.Add(_newAdvantageText);
     }
@@ -280,5 +337,10 @@
     private void AddSkill()
     {
         _playerSheet.skills.Add(_newSkillText);
+    }
+
+    private void AddOffense()
+    {
+        _playerSheet.offense.Add(_newSkillText);
     }
 }
