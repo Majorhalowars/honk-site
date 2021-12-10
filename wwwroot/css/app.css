@@ -77,7 +77,7 @@ a, .btn-link {
     border: none;
 }
 
-.character-display input:hover {
+.characterSheet input:hover {
     border: 1px solid grey;
 }
 
