@@ -77,13 +77,13 @@
                         Dodge
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Dodge"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.defenses["Dodge"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td> 
                         Fortitude
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Fortitude"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.defenses["Fortitude"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
                 <tr>
@@ -91,13 +91,13 @@
                         Parry
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Parry"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.defenses["Parry"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td> 
                         Toughness
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Toughness"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.defenses["Toughness"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
                 <tr>
@@ -105,7 +105,7 @@
                         Will
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.defenses["Will"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.defenses["Will"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
             </table>
@@ -121,13 +121,13 @@
                         Abilities
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Abilities"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.spentPoints["Abilities"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td> 
                         Skills
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Skills"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.spentPoints["Skills"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
                 <tr>
@@ -135,13 +135,13 @@
                         Parry
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Powers"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.spentPoints["Powers"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td> 
                         Toughness
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Defenses"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.spentPoints["Defenses"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                 </tr>
                 <tr>
@@ -149,7 +149,7 @@
                         Advantages
                     </td>
                     <td> 
-                        <input @bind='_playerSheet.spentPoints["Advantages"]' style="width: 100%" maxlength="4" inputmode="numeric"/>
+                        <input @bind='_playerSheet.spentPoints["Advantages"]' style="width: 100%; padding: 10px" maxlength="4" inputmode="numeric"/>
                     </td>
                     <td>
                         Total
@@ -366,7 +366,7 @@
 
     private void RemoveOffense(string target)
     {
-        _playerSheet.skills.Remove(target);
+        _playerSheet.offense.Remove(target);
     }
 
     // addition code
