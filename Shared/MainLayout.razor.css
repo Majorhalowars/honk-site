@@ -9,7 +9,7 @@ main {
 }
 
 .sidebar {
-    background-image: url('https://i.imgur.com/7u1vch7.png');
+    background-image: url('https://cosmosdex.com/images/ectimage/other/farbackgroundblack.png');
     background-repeat: repeat;
 }
 
@@ -21,6 +21,7 @@ main {
     height: 3.5rem;
     display: flex;
     align-items: center;
+    vertical-align: top;
 }
 
     .top-row ::deep a, .top-row .btn-link {
