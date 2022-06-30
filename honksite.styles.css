@@ -12,33 +12,29 @@ main[b-t8vz4dt82p] {
 }
 
 .sidebar[b-t8vz4dt82p] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: url('https://i.imgur.com/7u1vch7.png');
+    background-repeat: repeat;
 }
 
 .top-row[b-t8vz4dt82p] {
     background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    border-top: 2px solid #171717;
+    border-bottom: 2px solid #171717;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
 }
 
-    .top-row[b-t8vz4dt82p]  a, .top-row[b-t8vz4dt82p]  .btn-link {
+    .top-row[b-t8vz4dt82p]  a, .top-row .btn-link[b-t8vz4dt82p] {
         white-space: nowrap;
         margin-left: 1.5rem;
-        text-decoration: none;
     }
 
-    .top-row[b-t8vz4dt82p]  a:hover, .top-row[b-t8vz4dt82p]  .btn-link:hover {
-        text-decoration: underline;
-    }
-
-    .top-row[b-t8vz4dt82p]  a:first-child {
+    .top-row a:first-child[b-t8vz4dt82p] {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
 @media (max-width: 640.98px) {
     .top-row:not(.auth)[b-t8vz4dt82p] {
         display: none;
