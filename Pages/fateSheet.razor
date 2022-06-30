@@ -6,13 +6,13 @@
             <MatCardContent>
                 <div class="demo-mat-card-content">
                     <MatHeadline6 class="demo-mat-card-clean-margin">
-                        <input @bind="_sheet.aspectName" />
+                        <input @bind="_playerSheet.name" />
                     </MatHeadline6>
                 </div>
  
                 <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin">
                     <p>
-                        <textarea @bind="_sheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea>
+                        <textarea/>
                     </p>
                 </MatBody2>
             </MatCardContent>
@@ -20,6 +20,6 @@
 
 @code {
 
-    private fateSheet _sheet = new();
+    private mmSheet _playerSheet = new();
 
 }
