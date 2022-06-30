@@ -6,25 +6,20 @@
             <MatCardContent>
                 <div class="demo-mat-card-content">
                     <MatHeadline6 class="demo-mat-card-clean-margin">
-                        <input @bind="_playerSheet.aspectName" />
+                        <input @bind="_sheet.aspectName" />
                     </MatHeadline6>
                 </div>
  
                 <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin">
                     <p>
-                        <textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea>
+                        <textarea @bind="_sheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea>
                     </p>
                 </MatBody2>
             </MatCardContent>
-            <MatCardActions>
-                <MatCardActionIcons>
-                    <MatIconButton Icon="@MatIconNames.delete_outline"></MatIconButton>
-                </MatCardActionIcons>
-            </MatCardActions>
         </MatCard>
 
 @code {
-    // General variable creation, the mmSheet stuff is in the shared folder
 
-    private fateSheet _playerSheet = new();
+    private fateSheet _sheet = new();
+
 }
