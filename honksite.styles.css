@@ -12,7 +12,7 @@ main[b-t8vz4dt82p] {
 }
 
 .sidebar[b-t8vz4dt82p] {
-    background-image: url('https://i.imgur.com/7u1vch7.png');
+    background-image: url('https://cosmosdex.com/images/ectimage/other/farbackgroundblack.png');
     background-repeat: repeat;
 }
 
@@ -24,6 +24,7 @@ main[b-t8vz4dt82p] {
     height: 3.5rem;
     display: flex;
     align-items: center;
+    vertical-align: top;
 }
 
     .top-row[b-t8vz4dt82p]  a, .top-row .btn-link[b-t8vz4dt82p] {
