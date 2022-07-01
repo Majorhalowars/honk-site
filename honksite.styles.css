@@ -4,15 +4,17 @@
 .page[b-t8vz4dt82p] {
     position: relative;
     display: flex;
+    flex-direction: row;
 }
 
 .main[b-t8vz4dt82p] {
-    flex: 1;
+    flex: 2;
 }
 
 .sidebar[b-t8vz4dt82p] {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 57%, rgb(0,0,0,0) 98%), url('https://cdn.discordapp.com/attachments/564022557313859615/992227887858061372/unknown.png');
     background-repeat: repeat;
+    flex: 1;
 }
 
 .top-row[b-t8vz4dt82p] {
