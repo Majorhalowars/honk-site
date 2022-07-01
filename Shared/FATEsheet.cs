@@ -26,7 +26,7 @@ namespace honksite.Shared;
             {
                 return aspectName;
             }
-            public bool Equals(Part other)
+            public bool Equals(aspect other)
             {
                 if (other == null) return false;
                 return (this.aspectName.Equals(other.aspectName));
