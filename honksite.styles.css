@@ -3,7 +3,6 @@
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-t8vz4dt82p] {
     position: relative;
-    display: flex;
     flex-direction: row;
 }
 
@@ -53,6 +52,8 @@
 
 @media (min-width: 1000px) {
     .page[b-t8vz4dt82p] {
+        flex-direction: column;
+        display: flex
     }
 
     .sidebar[b-t8vz4dt82p] {
