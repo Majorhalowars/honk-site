@@ -8,7 +8,7 @@
 }
 
 .sidebar {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 57%, rgb(0,0,0,0) 98%), url('https://cdn.discordapp.com/attachments/564022557313859615/992227887858061372/unknown.png');
+    background-image: url('https://cdn.discordapp.com/attachments/564022557313859615/992227887858061372/unknown.png');
     background-repeat: repeat;
 }
 
@@ -54,10 +54,14 @@
 
     .sidebar {
         min-width: 250px;
-        max-width 500px;
-        height: 100vh;
+        max-width 880px;
+        height: 100px;
         position: sticky;
         top: 0;
+        background-image: url('https://cdn.discordapp.com/attachments/564022557313859615/992272305487089664/unknown.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
     }
 
     .top-row {
