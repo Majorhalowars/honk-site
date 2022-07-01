@@ -14,7 +14,7 @@
             <div class="cardHorizontal">
                 <div class="container">
                     <p><input @bind="@anAspect.aspectName" style="width: 100%"/> </p>
-                    <p><textarea @bind="@anAspect.aspectdescription" style="width: 100%; background-color: transparent"></textarea></p>
+                    <p><textarea @bind="@anAspect.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p>
                 </div>
             </div>
         }
@@ -37,12 +37,10 @@
         <div class="card">
           <div class="container">
             <p>
-                <label>
-                    <input @bind="_saveLoadJson" />
-                    <button @onclick="ExportToJson">[Export]</button>
-                    <button @onclick="ImportFromJson">[Import]</button>
-                    @_importError
-                </label>
+                <input @bind="_saveLoadJson" />
+                <button @onclick="ExportToJson">[Export]</button>
+                <button @onclick="ImportFromJson">[Import]</button>
+                @_importError
             </p> 
           </div>
         </div>
@@ -65,14 +63,18 @@
 
     void ImportFromJson()
     {
-        try {
-            mmSheet? _inputSheet = JsonSerializer.Deserialize<FATEsheet>(_saveLoadJson, options);
-            if(_inputSheet is null) { 
+        try 
+        {
+            FATEsheet? _inputSheet = JsonSerializer.Deserialize<FATEsheet>(_saveLoadJson, options);
+            if(_inputSheet is null) 
+            { 
                 return; 
             }
             _playerSheet = _inputSheet;
         }
-        catch (JsonException e) {
+
+        catch (JsonException e) 
+        {
             _importError = e.Message;
         }
     }
