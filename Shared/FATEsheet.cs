@@ -10,11 +10,22 @@ namespace honksite.Shared;
         public string description = "";
         public Dictionary<string, int> skills = new();
         
-        public List<Tuple<aspectclass>> aspectList = new() 
-        aspectList.Add(new aspectclass() {aspectName = "High Concept", aspectDescription = "funny words here"});
+        public List<aspectclass> aspectList = new() 
+
+        public FATEsheet
+        {
+            this.aspectList.Add(new aspectclass("High Concept","funny words here") );
+        }
+
     }
     public class aspectclass
+    {
+         public string aspectName {get; set;}
+         public string aspectDescription {get; set;}
+         public aspectclass(string aspectName, string aspectDescription)
         {
-            public string aspectName {get; set;}
-            public string aspectDescription {get; set;}
+          this.aspectName = aspectName;
+          this.aspectDescription = aspectDescription;
         }
+    }
+    
