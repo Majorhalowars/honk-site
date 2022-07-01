@@ -37,7 +37,7 @@
         <div class="card">
           <div class="container">
             <p>
-                <input @bind="_saveLoadJson" />
+                <input @bind="_saveLoadJson"/>
                 <button @onclick="ExportToJson">[Export]</button>
                 <button @onclick="ImportFromJson">[Import]</button>
                 @_importError
@@ -65,7 +65,7 @@
     {
         try 
         {
-            FATEsheet? _inputSheet = JsonSerializer.Deserialize<FATEsheet>(_saveLoadJson, options);
+            FATEsheet? _inputSheet = JsonSerializer.Deserialize<FATEsheet/>(_saveLoadJson, options);
             if(_inputSheet is null) 
             { 
                 return; 
