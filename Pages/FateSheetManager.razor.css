@@ -10,6 +10,7 @@
     border-radius: 5px;
     display: flex;
     flex-direction: row;
+    margin-top: 10px
 }
 .cardVertical {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -18,6 +19,7 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    margin-top: 10px
 }
 .cardHorizontal:hover {
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.3);

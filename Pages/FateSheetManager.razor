@@ -4,7 +4,7 @@
 
 <div class="sheetContainer">
 
-    <div class="leftColumn" style="flex-direction: column; display: flex">
+    <div class="leftColumn" style="flex-direction: column; display: flex; flex: 1">
         <div class="cardHorizontal">
           <div class="container">
             <p>Placeholder for the "add aspect" card!</p> 
@@ -13,8 +13,8 @@
         @foreach (aspectclass anAspect in _playerSheet.aspectList) {
             <div class="cardHorizontal">
                 <div class="container">
-                    <p><input @bind="@anAspect.aspectName" style="width: 100%"/> </p>
-                    <p><textarea @bind="@anAspect.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p>
+                    <p><input @bind="@anAspect.aspectName" style="width: 100%; margin-top: 10px"/> </p>
+                    <p><textarea @bind="@anAspect.aspectDescription" style="width: 100%; background-color: transparent; margin-bottom: 10px"></textarea></p>
                 </div>
             </div>
         }
@@ -26,7 +26,7 @@
     </div>
     
 
-    <div class="rightColumn" style="flex-direction: column; display: flex">
+    <div class="rightColumn" style="flex-direction: column; display: flex; flex: 1">
         <div class="cardVertical">
             <img src="https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png">
           <div class="container">
@@ -34,12 +34,12 @@
             <p><textarea @bind="_playerSheet.description" style="width: 100%; background-color: transparent"></textarea></p> 
           </div>
         </div>
-        <div class="card">
-          <div class="container">
+        <div class="cardHorizontal">
+          <div class="container" style="display: flex; flex-direction: row;">
             <p>
-                <input @bind="_saveLoadJson"/>
-                <button @onclick="ExportToJson">[Export]</button>
-                <button @onclick="ImportFromJson">[Import]</button>
+                <input @bind="_saveLoadJson" style="flex: 2"/>
+                <button @onclick="ExportToJson">[Export]style="flex: 1"</button>
+                <button @onclick="ImportFromJson">[Import]style="flex: 1"</button>
                 @_importError
             </p> 
           </div>
