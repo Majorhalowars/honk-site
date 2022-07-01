@@ -3,8 +3,8 @@
 @using honksite.Shared;
 
 <div class="sheetContainer">
-
-    <div class="leftColumn" style="flex-direction: column; display: flex;>
+    
+    <div class="leftColumn" style="flex-direction: column; display: flex;">
         <div class="cardHorizontal">
           <div class="container">
             <p>Placeholder for the "add aspect" card!</p> 
@@ -26,14 +26,15 @@
     </div>
     
 
-    <div class="rightColumn" style="flex-direction: column; display: flex;>
+    <div class="rightColumn" style="flex-direction: column; display: flex;">
         <div class="cardVertical">
-            <img src="https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png">
+          <img src="https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png">
           <div class="container">
             <input @bind="_playerSheet.name" style="width: 100%"/> 
             <p><textarea @bind="_playerSheet.description" style="width: 100%; background-color: transparent"></textarea></p> 
           </div>
         </div>
+
         <div class="cardHorizontal">
           <div class="container" style="display: flex; flex-direction: row;">
             <p>
