@@ -4,17 +4,8 @@
     display: flex;
     flex-direction: column;
 }
-.leftColumn[b-pft3e3np99] {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-}
-.rightColumn[b-pft3e3np99] {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-}
-.cardAspect[b-pft3e3np99] {
+
+.cardHorizontal[b-pft3e3np99] {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
@@ -25,11 +16,31 @@
     margin: 20px;
     display: flex;
 }
-
-.card:hover[b-pft3e3np99] {
+.cardVertical[b-pft3e3np99] {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    float: left;
+    margin: 20px;
+    display: flex;
+}
+.cardHorizontal:hover[b-pft3e3np99] {
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
 }
-
+.cardVertical:hover[b-pft3e3np99] {
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+}
+.cardHorizontal > img[b-pft3e3np99] {
+    width: 100%;
+    border-radius: 5px 0 0 5px
+}
+.cardVertical > img[b-pft3e3np99] {
+    width: 100%;
+    border-radius: 5px 5px 0 0
+}
 @media (max-width: 1000px) {
     .sheetContainer[b-pft3e3np99] {
         flex-direction: row;
