@@ -2,9 +2,36 @@
 @using System.Text.Json
 @using MatBlazor
 
-<p>
-   <input @bind="_playerSheet.aspectName" />
-</p>
+<style>
+            .demo-mat-card {
+                max-width: 400px;
+            }
+ 
+            .demo-mat-card-content {
+                padding: 1rem;
+            }
+ 
+            .demo-mat-card-clean-margin {
+                margin: 0px;
+            }
+        </style>
+        <MatCard class="demo-mat-card">
+            <MatCardContent>
+                <div class="demo-mat-card-content">
+                    <MatHeadline6 class="demo-mat-card-clean-margin">
+                        <p>
+                            <input @bind="_playerSheet.aspectName" />
+                        </p>
+                    </MatHeadline6>
+                </div>
+                <hr/>
+                <MatBody2 class="demo-mat-card-content demo-mat-card-clean-margin">
+                    <p>
+                        <textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea>
+                    </p>
+                </MatBody2>
+            </MatCardContent>
+        </MatCard>
 
 @code {
 
