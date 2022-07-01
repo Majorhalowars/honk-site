@@ -1,4 +1,9 @@
 /* /Pages/FateSheetManager.razor.rz.scp.css */
+.sheetContainer[b-pft3e3np99] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 .card[b-pft3e3np99] {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -8,6 +13,10 @@
     float: left;
     margin: 20px;
     display: flex;
+}
+
+.card:hover[b-pft3e3np99] {
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-t8vz4dt82p] {
