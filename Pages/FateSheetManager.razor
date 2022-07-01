@@ -49,13 +49,12 @@
 @code {
 
     private FATEsheet _playerSheet = new();
-    }
     
     private string _saveLoadJson = "";
-    private string _importError = "";
+    private string _importError = "Whoops doopsy, failed to import";
 
-    JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true, IncludeFields = true };
-    
+    private static readonly JsonSerializerOptions options = new(JsonSerializerDefaults.Web) { WriteIndented = true, IncludeFields = true };
+
     private void ExportToJson()
     {
         _saveLoadJson = JsonSerializer.Serialize(_playerSheet, typeof(FATEsheet), options);
@@ -66,18 +65,11 @@
         try 
         {
             _playerSheet = JsonSerializer.Deserialize<FATEsheet>(_saveLoadJson, options);
-            if(_inputSheet is null) 
-            { 
-                return; 
-            }
-            _playerSheet = _inputSheet;
         }
-
         catch (JsonException e) 
         {
             _importError = e.Message;
         }
     }
-    
 
 }
