@@ -11,7 +11,7 @@ namespace honksite.Shared;
         public Dictionary<string, int> skills = new();
         
         public List<aspectclass> aspectList = new() 
-        _playerSheet.aspectList.Add(new aspectclass() {aspectName = "High Concept", aspectDescription = "funny words here"}));
+        _playerSheet.aspectList.Add(new aspectclass() {aspectName = "High Concept"}, new aspectclass() {aspectDescription = "funny words here"});
     }
     public class aspectclass
         {
