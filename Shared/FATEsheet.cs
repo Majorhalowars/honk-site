@@ -9,16 +9,16 @@ namespace honksite.Shared;
         public string name = "";
         public string description = "";
         public Dictionary<string, int> skills = new();
-        public class aspectclass
+        public class aspectclass(string aspectName, string aspectDescription)
         {
             public string aspectName {get; set;}
             public string aspectDescription {get; set;}
 
             public override string ToString()
             {
-                return "Name: " + aspectName + "   desc: " + aspectDescription;
+                return "name: " + aspectName + " desc: " + aspectDescription;
             }
         }
         public List<aspectclass> aspectList = new();
-        public aspectList.Add(new aspectclass() { aspectName = "First Aspect", aspectDescription = "High Concept" });
+        aspectList.Add(new aspectclass() { aspectName = "First Aspect", aspectDescription = "High Concept" });
     }
