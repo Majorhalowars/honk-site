@@ -9,11 +9,10 @@
             <p>Placeholder for the "add aspect" card!</p> 
           </div>
         </div>
-        @foreach (Tuple<string, string> anAspect in _playerSheet.aspectList) }
+        @foreach (aspectclass anAspect in _playerSheet.aspectList) }
             <div class="cardHorizontal">
                 <div class="container">
-                    <input @bind="_playerSheet.aspectList[anAspect]"/> 
-                    <p><textarea @bind="_playerSheet.aspectList[anAspect]" style="width: 100%; background-color: transparent"></textarea></p> 
+                    <p>@anAspect</p>
                 </div>
             </div>
         <div class="card">
