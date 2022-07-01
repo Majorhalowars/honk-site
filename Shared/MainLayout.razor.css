@@ -44,6 +44,13 @@
     .top-row a, .top-row .btn-link {
         margin-left: 0;
     }
+
+    .sidebar {
+        background-image: url('https://cdn.discordapp.com/attachments/564022557313859615/992272305487089664/unknown.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -58,10 +65,7 @@
         height: 100px;
         position: sticky;
         top: 0;
-        background-image: url('https://cdn.discordapp.com/attachments/564022557313859615/992272305487089664/unknown.png');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+        
     }
 
     .top-row {
