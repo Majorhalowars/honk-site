@@ -51,7 +51,7 @@
     private FATEsheet _playerSheet = new();
     
     private string _saveLoadJson = "";
-    private string _importError = "Whoops doopsy, failed to import";
+    private string _importError = "";
 
     private static readonly JsonSerializerOptions options = new(JsonSerializerDefaults.Web) { WriteIndented = true, IncludeFields = true };
 

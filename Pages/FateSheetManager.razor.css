@@ -13,6 +13,7 @@
     float: left;
     margin: 20px;
     display: flex;
+    width: 40%;
 }
 .cardVertical {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -24,6 +25,7 @@
     float: left;
     margin: 20px;
     display: flex;
+    width: 40%;
 }
 .cardHorizontal:hover {
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
