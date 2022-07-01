@@ -20,10 +20,10 @@
     flex-direction: column;
 }
 .cardHorizontal:hover {
-    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.3);
 }
 .cardVertical:hover {
-    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.3);
 }
 .cardHorizontal > img {
     width: 100%;
