@@ -10,6 +10,8 @@
 .sidebar {
     background-image: url('https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png');
     background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .top-row {
@@ -60,8 +62,8 @@
     }
 
     .sidebar {
-        min-width: 880px;
-        max-width 880px;
+        min-width: 250px;
+        max-width 500px;
         height: 100vh;
         position: sticky;
         top: 0;
