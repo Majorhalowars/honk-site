@@ -36,7 +36,6 @@
         <div class="card">
           <div class="container">
             <p>wowow</p> 
-            <button @onclick="addAspect">[X]</button>
           </div>
         </div>
     </div>
@@ -44,19 +43,6 @@
 @code {
 
     private FATEsheet _playerSheet = new();
-    
-    public class aspectclass
-        {
-            public string aspectName {get; set;}
-            public string aspectDescription {get; set;}
-        }
-
-    private void addAspect() { 
-        aspectList.Add(
-            new aspectclass {
-            aspectName = "name";
-            aspectDescription = "desc""
-        });
     }
 
     
