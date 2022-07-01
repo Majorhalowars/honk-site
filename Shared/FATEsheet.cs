@@ -12,7 +12,7 @@ namespace honksite.Shared;
         
         public List<aspectclass> aspectList = new() 
 
-        public FATEsheet
+        public FATEsheet()
         {
             this.aspectList.Add(new aspectclass("High Concept","funny words here") );
         }
