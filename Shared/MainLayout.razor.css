@@ -64,7 +64,6 @@
         width: 250px;
         height: 100vh;
         position: sticky;
-        background-size: 46px 23px;
         background-attachment: scroll;
         top: 0;
     }
