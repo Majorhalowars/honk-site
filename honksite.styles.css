@@ -4,12 +4,10 @@
 .page[b-t8vz4dt82p] {
     position: relative;
     display: flex;
-    flex-direction: column;
 }
 
 .main[b-t8vz4dt82p] {
     flex: 1;
-    flex-direction: row;
 }
 
 .sidebar[b-t8vz4dt82p] {
