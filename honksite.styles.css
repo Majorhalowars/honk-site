@@ -11,9 +11,6 @@
 }
 
 .sidebar[b-t8vz4dt82p] {
-    background-image: url('https://cosmosdex.com/images/ectimage/other/farbackgroundblack.png');
-    background-repeat: repeat;
-    background-size: 400px 400px;
 }
 
 .top-row[b-t8vz4dt82p] {
@@ -62,6 +59,8 @@
     }
 
     .sidebar[b-t8vz4dt82p] {
+        background-image: url('https://cosmosdex.com/images/ectimage/other/farbackgroundblack.png');
+        background-repeat: repeat;
         width: 250px;
         height: 250px;
         position: sticky;
