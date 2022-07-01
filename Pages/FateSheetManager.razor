@@ -1,18 +1,22 @@
 @page "/fate-sheet"
 @using System.Text.Json
 
-<style>
-    .demo-mat-elevation-container div {
-        width: 200px;
-        height: 100px;
-        float: left;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: monospace;
-    }
-</style>
+
+<div class="card">
+    <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315347845791754/unknown.png" style="width:100%">
+  <div class="container">
+    <input @bind="_playerSheet.aspectName" /> 
+    <p><textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
+  </div>
+</div>
+
+<div class="card">
+    <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315348135182386/horrorofthewest..png" style="width:100%">
+  <div class="container">
+    <input @bind="_playerSheet.aspectName" /> 
+    <p><textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
+  </div>
+</div>
 
 <div class="card">
     <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315347845791754/unknown.png" style="width:100%">
