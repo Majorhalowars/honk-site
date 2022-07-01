@@ -9,7 +9,10 @@ namespace honksite.Shared;
         public string name = "";
         public string description = "";
         public Dictionary<string, int> skills = new();
-        public class aspectclass
+        
+        public List<aspectclass> aspectList = new();
+    }
+    public class aspectclass
         {
             public string aspectName {get; set;}
             public string aspectDescription {get; set;}
@@ -19,5 +22,3 @@ namespace honksite.Shared;
                 return "name: " + aspectName + " desc: " + aspectDescription;
             }
         }
-        public List<aspectclass> aspectList = new();
-    }
