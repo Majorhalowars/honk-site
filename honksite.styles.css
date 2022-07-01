@@ -11,6 +11,8 @@
 }
 
 .sidebar[b-t8vz4dt82p] {
+    background-image: url('https://cosmosdex.com/images/ectimage/other/farbackgroundblack.png');
+    background-repeat: repeat;
 }
 
 .top-row[b-t8vz4dt82p] {
@@ -48,7 +50,6 @@
 
     .sidebar[b-t8vz4dt82p] {
         background-image: url('https://cdn.discordapp.com/attachments/564022557313859615/992272305487089664/unknown.png');
-        background-repeat: no-repeat;
     }
 }
 
@@ -59,11 +60,11 @@
     }
 
     .sidebar[b-t8vz4dt82p] {
-        background-image: url('https://cosmosdex.com/images/ectimage/other/farbackgroundblack.png');
-        background-repeat: repeat;
         width: 250px;
-        height: 250px;
+        height: 100vh;
         position: sticky;
+        background-size: 100px 100px;
+        background-attachment: scroll;
         top: 0;
     }
 
