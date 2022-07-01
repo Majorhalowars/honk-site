@@ -13,6 +13,12 @@ namespace honksite.Shared;
         {
             public string aspectName {get; set;}
             public string aspectDescription {get; set;}
+
+            public override string ToString()
+            {
+                return "Name: " + aspectName + "   desc: " + aspectDescription;
+            }
         }
-        public List<aspectclass> aspectList = new() { {"First Aspect","High Concept" },{"Second Aspect","Trouble/Complication"} };
+        public List<aspectclass> aspectList = new();
+        public aspectList.Add(new aspectclass() { aspectName = "First Aspect", aspectDescription = "High Concept" });
     }
