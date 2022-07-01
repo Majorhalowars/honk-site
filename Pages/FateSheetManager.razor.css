@@ -1,7 +1,7 @@
 .sheetContainer {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .cardHorizontal {
@@ -10,7 +10,7 @@
     border-radius: 5px;
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     float: left;
     margin: 20px;
     display: flex;
@@ -21,7 +21,7 @@
     border-radius: 5px;
     display: flex;
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     float: left;
     margin: 20px;
     display: flex;
@@ -42,6 +42,6 @@
 }
 @media (max-width: 1000px) {
     .sheetContainer {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
