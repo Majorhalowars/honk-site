@@ -1,9 +1,9 @@
 .sheetContainer {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
-.card {
+.cardAspect {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
@@ -21,6 +21,6 @@
 
 @media (max-width: 1000px) {
     .sheetContainer {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
