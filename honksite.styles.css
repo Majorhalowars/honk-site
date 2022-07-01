@@ -2,7 +2,7 @@
 .sheetContainer[b-pft3e3np99] {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .cardHorizontal[b-pft3e3np99] {
@@ -11,7 +11,7 @@
     border-radius: 5px;
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     float: left;
     margin: 20px;
     display: flex;
@@ -22,7 +22,7 @@
     border-radius: 5px;
     display: flex;
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     float: left;
     margin: 20px;
     display: flex;
@@ -43,7 +43,7 @@
 }
 @media (max-width: 1000px) {
     .sheetContainer[b-pft3e3np99] {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
