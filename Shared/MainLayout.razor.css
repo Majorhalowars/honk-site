@@ -47,8 +47,10 @@
 
     .sidebar {
         background-image: url('https://cdn.discordapp.com/attachments/564022557313859615/992272305487089664/unknown.png');
+        background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
+        width: 100vw;
     }
 }
 
@@ -62,7 +64,7 @@
         width: 250px;
         height: 100vh;
         position: sticky;
-        background-size: 92px 46px;
+        background-size: 46px 23px;
         background-attachment: scroll;
         top: 0;
     }
