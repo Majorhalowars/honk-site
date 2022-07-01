@@ -45,12 +45,20 @@
 
     private FATEsheet _playerSheet = new();
     
+    public class aspectclass
+        {
+            public string aspectName {get; set;}
+            public string aspectDescription {get; set;}
+        }
+
     private void addAspect() { 
         aspectList.Add(
             new aspectclass {
-            aspectName = name;
-            aspectDescription = desc
+            aspectName = "name";
+            aspectDescription = "desc""
         });
     }
+
+    
 
 }
