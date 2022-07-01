@@ -11,7 +11,7 @@
 }
 
 .sidebar[b-t8vz4dt82p] {
-    background-image: url('https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png');
+    background-image: url('https://cosmosdex.com/images/ectimage/other/farbackgroundblack.png');
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -53,8 +53,6 @@
     .sidebar[b-t8vz4dt82p] {
         background-image: url('https://cdn.discordapp.com/attachments/564022557313859615/992272305487089664/unknown.png');
         background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
     }
 }
 
