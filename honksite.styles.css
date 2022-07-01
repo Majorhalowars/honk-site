@@ -52,7 +52,7 @@
 
 @media (min-width: 1000px) {
     .page[b-t8vz4dt82p] {
-        flex-direction: column;
+        flex-direction: row;
         display: flex
     }
 
