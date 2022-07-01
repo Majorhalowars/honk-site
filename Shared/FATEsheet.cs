@@ -9,8 +9,10 @@ namespace honksite.Shared;
         public string name = "";
         public string description = "";
         public Dictionary<string, int> skills = new();
-        public class aspectclass(string aspectName, string aspectDescription)
+        public class aspectclass
         {
+            public string aspectName {get; set;}
+            public string aspectDescription {get; set;}
         }
         public List<aspectclass> aspectList = new() { {"First Aspect","High Concept" },{"Second Aspect","Trouble/Complication"} };
     }
