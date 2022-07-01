@@ -12,8 +12,8 @@
         @foreach (var anAspect in _playerSheet.aspectList) }
             <div class="cardHorizontal">
                 <div class="container">
-                    <input @bind="_playerSheet.aspectList.anAspect.Item1"/> 
-                    <p><textarea @bind="_playerSheet.aspectList.anAspect.Item2" style="width: 100%; background-color: transparent"></textarea></p> 
+                    <input @bind="_playerSheet.aspectList[anAspect].Item1"/> 
+                    <p><textarea @bind="_playerSheet.aspectList[anAspect].Item2" style="width: 100%; background-color: transparent"></textarea></p> 
                 </div>
             </div>
         <div class="card">
