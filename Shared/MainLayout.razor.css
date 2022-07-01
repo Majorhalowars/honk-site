@@ -1,6 +1,5 @@
 .page {
     position: relative;
-    display: flex;
     flex-direction: row;
 }
 
@@ -50,6 +49,8 @@
 
 @media (min-width: 1000px) {
     .page {
+        flex-direction: column;
+        display: flex
     }
 
     .sidebar {
