@@ -3,17 +3,8 @@
     display: flex;
     flex-direction: column;
 }
-.leftColumn {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-}
-.rightColumn {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-}
-.cardAspect {
+
+.cardHorizontal {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
@@ -24,11 +15,31 @@
     margin: 20px;
     display: flex;
 }
-
-.card:hover {
+.cardVertical {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    float: left;
+    margin: 20px;
+    display: flex;
+}
+.cardHorizontal:hover {
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
 }
-
+.cardVertical:hover {
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+}
+.cardHorizontal > img {
+    width: 100%;
+    border-radius: 5px 0 0 5px
+}
+.cardVertical > img {
+    width: 100%;
+    border-radius: 5px 5px 0 0
+}
 @media (max-width: 1000px) {
     .sheetContainer {
         flex-direction: row;
