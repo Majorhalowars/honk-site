@@ -1,31 +1,37 @@
 @page "/fate-sheet"
 @using System.Text.Json
 
+<div class="sheetContainer">
+    <div class="leftColumn">
+        <div class="card">
+            <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315347845791754/unknown.png" style="width:100%; border-radius: 5px 5px 0 0">
+          <div class="container">
+            <input @bind="_playerSheet.aspectName" /> 
+            <p><textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
+          </div>
+        </div>
 
-<div class="card">
-    <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315347845791754/unknown.png" style="width:100%">
-  <div class="container">
-    <input @bind="_playerSheet.aspectName" /> 
-    <p><textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
-  </div>
+        <div class="card">
+            <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315348135182386/horrorofthewest..png" style="width:100%; border-radius: 5px 5px 0 0">
+          <div class="container">
+            <input @bind="_playerSheet.aspectName" /> 
+            <p><textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
+          </div>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315347845791754/unknown.png" style="width:100%; border-radius: 5px 5px 0 0">
+          <div class="container">
+            <input @bind="_playerSheet.aspectName" /> 
+            <p><textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
+          </div>
+        </div>
+    </div>
+
+    <div class="rightColumn">
+        wowow
+    </div>
 </div>
-
-<div class="card">
-    <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315348135182386/horrorofthewest..png" style="width:100%">
-  <div class="container">
-    <input @bind="_playerSheet.aspectName" /> 
-    <p><textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
-  </div>
-</div>
-
-<div class="card">
-    <img src="https://cdn.discordapp.com/attachments/872160747306754058/992315347845791754/unknown.png" style="width:100%">
-  <div class="container">
-    <input @bind="_playerSheet.aspectName" /> 
-    <p><textarea @bind="_playerSheet.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
-  </div>
-</div>
-
 @code {
 
     private FATEsheet _playerSheet = new();
