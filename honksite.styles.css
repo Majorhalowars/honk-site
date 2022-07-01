@@ -2,7 +2,7 @@
 .sheetContainer[b-pft3e3np99] {
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .card[b-pft3e3np99] {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -22,7 +22,7 @@
 
 @media (max-width: 1000px) {
     .sheetContainer[b-pft3e3np99] {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
