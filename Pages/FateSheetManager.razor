@@ -4,7 +4,7 @@
 
 <div class="sheetContainer">
 
-    <div class="leftColumn" style="flex-direction: column; display: flex; flex: 1">
+    <div class="leftColumn" style="flex-direction: column; display: flex;>
         <div class="cardHorizontal">
           <div class="container">
             <p>Placeholder for the "add aspect" card!</p> 
@@ -26,7 +26,7 @@
     </div>
     
 
-    <div class="rightColumn" style="flex-direction: column; display: flex; flex: 1">
+    <div class="rightColumn" style="flex-direction: column; display: flex;>
         <div class="cardVertical">
             <img src="https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png">
           <div class="container">
@@ -37,9 +37,9 @@
         <div class="cardHorizontal">
           <div class="container" style="display: flex; flex-direction: row;">
             <p>
-                <input @bind="_saveLoadJson" style="flex: 2"/>
-                <button @onclick="ExportToJson">[Export]style="flex: 1"</button>
-                <button @onclick="ImportFromJson">[Import]style="flex: 1"</button>
+                <input @bind="_saveLoadJson"/>
+                <button @onclick="ExportToJson">[Export]</button>
+                <button @onclick="ImportFromJson">[Import]"</button>
                 @_importError
             </p> 
           </div>

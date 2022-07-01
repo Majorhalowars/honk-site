@@ -6,20 +6,20 @@
 .cardHorizontal {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 40%;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    margin-top: 10px
+    margin-top: 10px;
+    border-top: 1px thin #171717
 }
 .cardVertical {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 40%;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    margin-top: 10px
+    margin-top: 10px;
+    border-top: 1px thin #171717
 }
 .cardHorizontal:hover {
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.3);
@@ -28,11 +28,11 @@
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.3);
 }
 .cardHorizontal > img {
-    width: 100%;
+    height: 100%;
     border-radius: 5px 0 0 5px;
 }
 .cardVertical > img {
-    height: 100%;
+    width: 100%;
     border-radius: 5px 5px 0 0;
 }
 
