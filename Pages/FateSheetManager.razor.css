@@ -3,13 +3,23 @@
     display: flex;
     flex-direction: column;
 }
+.leftColumn {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+.rightColumn {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
 .cardAspect {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
     display: flex;
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     float: left;
     margin: 20px;
     display: flex;
