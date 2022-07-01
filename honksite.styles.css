@@ -21,10 +21,10 @@
     flex-direction: column;
 }
 .cardHorizontal:hover[b-pft3e3np99] {
-    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.3);
 }
 .cardVertical:hover[b-pft3e3np99] {
-    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.3);
 }
 .cardHorizontal > img[b-pft3e3np99] {
     width: 100%;
