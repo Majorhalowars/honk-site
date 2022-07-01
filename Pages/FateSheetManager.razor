@@ -11,7 +11,6 @@
         </div>
         @foreach (aspect anAspect in _playerSheet.aspectList.Keys) }
             <div class="cardHorizontal">
-                <button @onclick="">[X]</button>
                 <div class="container">
                     <input @bind="_playerSheet.aspectList.anAspect.aspectName"/> 
                     <p><textarea @bind="_playerSheet.aspectList.anAspect.aspectDescription" style="width: 100%; background-color: transparent"></textarea></p> 
