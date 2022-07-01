@@ -10,5 +10,5 @@ namespace honksite.Shared;
         public string description = "";
         public Dictionary<string, int> skills = new();
 
-        public List<Tuple<string, string>> aspectList = new() { {"First Aspect","High Concept" },{"Second Aspect","Trouble/Complication"} };
+        public List<string, string> aspectList = new() { {"First Aspect","High Concept" },{"Second Aspect","Trouble/Complication"} };
     }
