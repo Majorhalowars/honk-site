@@ -12,7 +12,7 @@ namespace honksite.Shared;
         
         public List<aspectclass> aspectList = new();
     }
-    public class aspectclass : IEquatable<aspectclass>
+    public class aspectclass
         {
             public string aspectName {get; set;}
             public string aspectDescription {get; set;}
