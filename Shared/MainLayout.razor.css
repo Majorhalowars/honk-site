@@ -9,8 +9,10 @@ main {
 }
 
 .sidebar {
-    background-image: url('https://cdn.discordapp.com/attachments/564022557313859615/992227887858061372/unknown.png'),linear-gradient(to bottom, rgba(0,0,0,0) 57%, rgb(0,0,0,0) 98%);
-    background-repeat: repeat;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 57%, rgb(0,0,0,0) 98%), url('https://cdn.discordapp.com/attachments/564022557313859615/992227887858061372/unknown.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .top-row {
@@ -32,7 +34,8 @@ main {
         overflow: hidden;
         text-overflow: ellipsis;
     }
-@media (max-width: 640.98px) {
+
+@media (max-width: 1000px) {
     .top-row:not(.auth) {
         display: none;
     }
@@ -46,7 +49,7 @@ main {
     }
 }
 
-@media (min-width: 641px) {
+@media (min-width: 1000px) {
     .page {
         flex-direction: row;
     }
@@ -64,11 +67,11 @@ main {
         z-index: 1;
     }
 
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
+        .top-row.auth ::deep a:first-child {
+            flex: 1;
+            text-align: right;
+            width: 0;
+        }
 
     .top-row, article {
         padding-left: 2rem !important;
