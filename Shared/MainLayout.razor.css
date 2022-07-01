@@ -10,8 +10,6 @@
 .sidebar {
     background-image: url('https://cosmosdex.com/images/ectimage/other/farbackgroundblack.png');
     background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 .top-row {
