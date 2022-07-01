@@ -2,7 +2,6 @@
 .sheetContainer[b-pft3e3np99] {
     position: relative;
     display: flex;
-    flex-direction: row;
 }
 
 .cardHorizontal[b-pft3e3np99] {
@@ -35,15 +34,21 @@
 }
 .cardHorizontal > img[b-pft3e3np99] {
     width: 100%;
-    border-radius: 5px 0 0 5px
+    border-radius: 5px 0 0 5px;
 }
 .cardVertical > img[b-pft3e3np99] {
     width: 100%;
-    border-radius: 5px 5px 0 0
+    border-radius: 5px 5px 0 0;
 }
+
 @media (max-width: 1000px) {
     .sheetContainer[b-pft3e3np99] {
         flex-direction: column;
+    }
+}
+@media (min-width: 1000px) {
+    .sheetContainer[b-pft3e3np99] {
+        flex-direction: row;
     }
 }
 /* /Shared/MainLayout.razor.rz.scp.css */
