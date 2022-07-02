@@ -82,11 +82,11 @@
                 @foreach (stuntclass stunt in _playerSheet.stuntList) {
                     <div class="cardHorizontal">
                         <div class="container" style="flex-direction: column; display: flex">
-                            <divstyle="flex-direction: row; display: flex">   
+                            <div style="flex-direction: row; display: flex">   
                                 <button class="btn" style="float: left" @onclick="() => removeStunt(stunt)">[🞪]</button>
                                 <p><input @bind="@stunt.stuntName" style="width: 100%; margin-top: 10px; margin-bottom: 10px"/></p>
                                     
-                            </divstyle="flex-direction:>
+                            </div>
                             <p><textarea @bind="@stunt.stuntDescription" style="width: 100%; background-color: transparent; box-sizing: border-box;"></textarea></p>
                         </div>
                     </div>
