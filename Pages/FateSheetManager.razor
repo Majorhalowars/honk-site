@@ -15,7 +15,7 @@
             <div class="cardHorizontal">
                 <div class="container" style="flex-direction: column; display: flex">
                     <div class="container" style="flex-direction: row; display: flex">
-                        <button @onclick="removeAspect(anAspect)">[X]</button>
+                        <button @onclick="() => removeAspect(@anAspect)">[X]</button>
                         <p><input @bind="@anAspect.aspectName" style="width: 100%; margin-top: 10px"/> </p>
                     </div>
                     <p><textarea @bind="@anAspect.aspectDescription" style="width: 100%; background-color: transparent; margin-bottom: 10px"></textarea></p>
@@ -84,6 +84,6 @@
 
     private void removeAspect(aspectclass target)
     {
-        _playerSheet.aspectList.Remove(aspectclass target);
+        _playerSheet.aspectList.Remove(target);
     }
 }
