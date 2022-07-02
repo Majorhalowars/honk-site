@@ -66,7 +66,7 @@
         </div>
 
         <div class="stuntAndSkillContainer" style="display: flex; flex-direction: row">
-            <div class="skillContainer" style="display: flex; flex-direction: column"
+            <div class="skillContainer" style="display: flex; flex-direction: column">
 
                 @foreach (skillclass skill in _playerSheet.skillList) {
                     <div class="cardHorizontal">
@@ -92,6 +92,7 @@
         </div>
     </div>
 </div>
+
 @code {
 
     private FATEsheet _playerSheet = new();
