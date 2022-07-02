@@ -40,6 +40,17 @@
     border-radius: 5px 5px 0 0;
 }
 
+.btn[b-pft3e3np99] {
+    background-color: #171717;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+    .btn:hover[b-pft3e3np99] {
+        background-color: #0e0e0e;
+    }
 @media (max-width: 1000px) {
     .sheetContainer[b-pft3e3np99] {
         flex-direction: column;
