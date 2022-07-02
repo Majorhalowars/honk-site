@@ -33,6 +33,7 @@ namespace honksite.Shared;
           this.skillName = skillName;
           this.skillLevel = skillLevel;
         }
+    }
     public class stuntclass
     {
          public string stuntName {get; set;}
