@@ -54,7 +54,7 @@
 
         <div class="cardHorizontal">
           <div class="container" style="display: flex; flex-direction: row">
-              <div> style="float: left; flex: 1"
+              <div style="float: left; flex: 1">
                 <button class="btn" style="float: left" @onclick="createSkill">[+]</button>
                 <p>Click to add a skill.</p> 
               </div>
@@ -82,11 +82,12 @@
                 @foreach (stuntclass stunt in _playerSheet.stuntList) {
                     <div class="cardHorizontal">
                         <div class="container" style="flex-direction: row; display: flex">
-                            <button class="btn" style="float: left" @onclick="() => removeStunt(stunt)">[🞪]</button>
-                                <div>   
-                                    <p><input @bind="@stunt.stuntName" style="width: 100%; margin-top: 10px; margin-bottom: 10px"/></p>
-                                    <p><textarea @bind="@stunt.stuntDescription" style="width: 100%; background-color: transparent; box-sizing: border-box;"></textarea></p>
-                                </div>
+                            <div>   
+                                <button class="btn" style="float: left" @onclick="() => removeStunt(stunt)">[🞪]</button>
+                                <p><input @bind="@stunt.stuntName" style="width: 100%; margin-top: 10px; margin-bottom: 10px"/></p>
+                                    
+                            </div>
+                            <p><textarea @bind="@stunt.stuntDescription" style="width: 100%; background-color: transparent; box-sizing: border-box;"></textarea></p>
                         </div>
                     </div>
                 }
