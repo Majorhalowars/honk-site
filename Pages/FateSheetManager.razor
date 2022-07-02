@@ -42,13 +42,11 @@
         </div>
 
         <div class="cardHorizontal">
-          <div class="container" style="display: flex; flex-direction: row">
-            <p style="align-items: center">
-                <input style="float: left; display: flex; margin-top: 10px" @bind="_saveLoadJson"/>
-                <button class="btn" style="float: left; display: flex; margin-top: 10px" @onclick="ExportToJson">[Export]</button>
-                <button class="btn" style="float: left; display: flex; margin-top: 10px" @onclick="ImportFromJson">[Import]</button>
-                @_importError
-            </p> 
+          <div class="container" style="display: flex; flex-direction: row; align-items: center">
+            <input style="float: left; display: flex; margin-top: 10px" @bind="_saveLoadJson"/>
+            <button class="btn" style="float: left; display: flex; margin-top: 10px" @onclick="ExportToJson">[Export]</button>
+            <button class="btn" style="float: left; display: flex; margin-top: 10px" @onclick="ImportFromJson">[Import]</button>
+            @_importError
           </div>
         </div>
 
