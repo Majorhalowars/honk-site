@@ -58,7 +58,7 @@
           </div>
         </div>
 
-        @foreach (string skill in _playerSheet.skills) {
+        @foreach (string skill in _playerSheet.skillList) {
             <div class="cardHorizontal">
                 <div class="container" style="flex-direction: row; display: flex">
                     <button class="btn" style="float: left" @onclick="() => removeSkill(skill)">[🞪]</button>
