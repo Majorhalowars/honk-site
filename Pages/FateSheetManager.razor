@@ -58,7 +58,7 @@
           </div>
         </div>
 
-        @foreach (skillList skill in _playerSheet.skillList) {
+        @foreach (skillclass skill in _playerSheet.skillList) {
             <div class="cardHorizontal">
                 <div class="container" style="flex-direction: row; display: flex">
                     <button class="btn" style="float: left" @onclick="() => removeSkill(skill)">[🞪]</button>
@@ -106,7 +106,7 @@
 
     private void createSkill()
     {
-        _playerSheet.skillList.Add(new skillclass("","0"));
+        _playerSheet.skillList.Add(new skillclass("",0));
     }
     private void removeSkill(skillclass target)
     {
