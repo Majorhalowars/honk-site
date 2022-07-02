@@ -2,6 +2,7 @@
 .sheetContainer[b-pft3e3np99] {
     position: relative;
     display: flex;
+    flex: 1;
 }
 
 .cardHorizontal[b-pft3e3np99] {
@@ -11,7 +12,8 @@
     display: flex;
     flex-direction: row;
     margin-top: 10px;
-    border-top: 1px thin #171717
+    border-top: 2px solid #171717;
+    width: 100%
 }
 .cardVertical[b-pft3e3np99] {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -20,7 +22,8 @@
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    border-top: 1px thin #171717
+    border-top: 2px solid #171717;
+    width: 100%
 }
 .cardHorizontal:hover[b-pft3e3np99] {
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.3);
