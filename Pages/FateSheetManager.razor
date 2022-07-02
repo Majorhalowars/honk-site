@@ -33,16 +33,17 @@
 
     <div class="rightColumn" style="flex-direction: column; display: flex; flex: 1">
         <div class="cardVertical">
-          <img src="https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png">
+          <img src="@_playerSheet.characterImage" alt="Lmao did you not set it right? Send it in discord and copy the link">
           <div class="container">
             <input @bind="_playerSheet.name" style="width: 100%"/> 
             <p><textarea @bind="_playerSheet.description" style="width: 100%; background-color: transparent; box-sizing: border-box;"></textarea></p> 
           </div>
+          <input @bind="@_playerSheet.characterImage" inputmode="url"/>
         </div>
 
         <div class="cardHorizontal">
-          <div class="container" style="display: flex; flex-direction: row;">
-            <p>
+          <div class="container" style="display: flex; flex-direction: row">
+            <p style="align-items: center">
                 <input style="float: left; display: flex; margin-top: 10px" @bind="_saveLoadJson"/>
                 <button class="btn" style="float: left; display: flex; margin-top: 10px" @onclick="ExportToJson">[Export]</button>
                 <button class="btn" style="float: left; display: flex; margin-top: 10px" @onclick="ImportFromJson">[Import]</button>
@@ -52,21 +53,41 @@
         </div>
 
         <div class="cardHorizontal">
-          <div class="container">
-            <button class="btn" style="float: left" @onclick="createSkill">[+]</button>
-            <p>Click to add a skill.</p> 
+          <div class="container" style="display: flex; flex-direction: row">
+              <div>
+                <button class="btn" style="float: left" @onclick="createSkill">[+]</button>
+                <p>Click to add a skill.</p> 
+              </div>
+              <div>
+                <p style="float: right">Click to add a stunt.</p> 
+                <button class="btn" style="float: right" @onclick="createStunt">[+]</button>
+              </div>
           </div>
         </div>
 
-        @foreach (skillclass skill in _playerSheet.skillList) {
-            <div class="cardHorizontal">
-                <div class="container" style="flex-direction: row; display: flex">
-                    <button class="btn" style="float: left" @onclick="() => removeSkill(skill)">[🞪]</button>
-                    <p><input @bind="@skill.skillName" style="width: 100%; margin-top: 10px"/></p>
-                    <p><input @bind="@skill.skillLevel" style="width: 100%; margin-top: 10px" maxlength="2" inputmode="numeric"/></p>
-                </div>
+        <div class="stuntAndSkillContainer" style="display: flex; flex-direction: row">
+            <div class="skillContainer" style="display: flex; flex-direction column"
+                @foreach (skillclass skill in _playerSheet.skillList) {
+                    <div class="cardHorizontal">
+                        <div class="container" style="flex-direction: row; display: flex">
+                            <button class="btn" style="float: left" @onclick="() => removeSkill(skill)">[🞪]</button>
+                            <p><input @bind="@skill.skillName" style="width: 100%; margin-top: 10px; margin-bottom: 10px"/></p>
+                            <p><input @bind="@skill.skillLevel" style="width: 100%; margin-left: 5px" maxlength="2" inputmode="numeric"/></p>
+                        </div>
+                    </div>
+                }
+
+                @foreach (stuntclass stunt in _playerSheet.stuntList) {
+                    <div class="cardHorizontal">
+                        <div class="container" style="flex-direction: row; display: flex">
+                            <button class="btn" style="float: left" @onclick="() => removeStunt(stunt)">[🞪]</button>
+                            <p><input @bind="@stunt.stuntName" style="width: 100%; margin-top: 10px; margin-bottom: 10px"/></p>
+                            <p><input @bind="@stunt.stuntDescription" style="width: 100%; margin-left: 5px" maxlength="2" inputmode="numeric"/></p>
+                        </div>
+                    </div>
+                }
             </div>
-        }
+        </div>
     </div>
 </div>
 @code {
@@ -97,7 +118,7 @@
 
     private void createAspect()
     {
-        _playerSheet.aspectList.Add(new aspectclass("",""));
+        _playerSheet.aspectList.Add(new aspectclass("Aspect Name","Describe the aspect here."));
     }
     private void removeAspect(aspectclass target)
     {
@@ -106,10 +127,19 @@
 
     private void createSkill()
     {
-        _playerSheet.skillList.Add(new skillclass("",0));
+        _playerSheet.skillList.Add(new skillclass("Skill Name",00));
     }
     private void removeSkill(skillclass target)
     {
         _playerSheet.skillList.Remove(target);
+    }
+
+    private void createStunt()
+    {
+        _playerSheet.stuntList.Add(new stuntclass("Stunt Name","Describe the effects of the stunt here."));
+    }
+    private void removeStunt(stuntclass target)
+    {
+        _playerSheet.stuntList.Remove(target);
     }
 }
