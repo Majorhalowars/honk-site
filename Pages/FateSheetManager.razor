@@ -4,10 +4,11 @@
 
 <div class="sheetContainer">
     
-    <div class="leftColumn" style="flex-direction: column; display: flex; margin-right: 10px">
+    <div class="leftColumn" style="flex-direction: column; display: flex; margin-right: 10px; flex: 1">
         <div class="cardHorizontal">
           <div class="container">
-            <p>Placeholder for the "add aspect" card!</p> 
+            <button @onclick="createAspect">[X]</button>
+            <p>Click to add an aspect" card!</p> 
           </div>
         </div>
         @foreach (aspectclass anAspect in _playerSheet.aspectList) {
@@ -26,7 +27,7 @@
     </div>
     
 
-    <div class="rightColumn" style="flex-direction: column; display: flex;">
+    <div class="rightColumn" style="flex-direction: column; display: flex; flex: 1">
         <div class="cardVertical">
           <img src="https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png">
           <div class="container">
@@ -73,4 +74,8 @@
         }
     }
 
+    private void createAspect()
+    {
+    _playerSheet.aspectList.Add(new aspectclass("",""));
+    }
 }

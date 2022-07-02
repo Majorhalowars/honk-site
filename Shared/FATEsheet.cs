@@ -14,7 +14,7 @@ namespace honksite.Shared;
 
         public FATEsheet()
         {
-            this.aspectList.Add(new aspectclass("High Concept","funny words here") );
+            this.aspectList.Add(new aspectclass("High Concept Name","Describe it with a few words") );
         }
 
     }
