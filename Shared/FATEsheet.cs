@@ -8,8 +8,8 @@ namespace honksite.Shared;
     {
         public string name = "Name";
         public string description = "Write yourself a bio!";
-        public Dictionary<string, int> skills = new();
-        
+
+        public List<skillclass> skillList = new();
         public List<aspectclass> aspectList = new();
     }
     public class aspectclass
@@ -22,4 +22,13 @@ namespace honksite.Shared;
           this.aspectDescription = aspectDescription;
         }
     }
-    
+    public class skillclass
+    {
+         public string skillName {get; set;}
+         public int skillLevel {get; set;}
+         public skillclass(string skillName, int skillLevel)
+        {
+          this.skillName = skillName;
+          this.skillLevel = skillLevel;
+        }
+    }

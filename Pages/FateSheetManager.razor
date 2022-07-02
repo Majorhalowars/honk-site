@@ -7,8 +7,8 @@
     <div class="leftColumn" style="flex-direction: column; display: flex; margin-right: 10px; flex: 1">
         <div class="cardHorizontal">
           <div class="container">
-            <button class="btn" style="float: left" @onclick="createAspect">[🞪]</button>
-            <p>Click to add an aspect card!</p> 
+            <button class="btn" style="float: left" @onclick="createAspect">[+]</button>
+            <p>Click to add an aspect.</p> 
           </div>
         </div>
         @foreach (aspectclass anAspect in _playerSheet.aspectList) {
@@ -43,13 +43,29 @@
         <div class="cardHorizontal">
           <div class="container" style="display: flex; flex-direction: row;">
             <p>
-                <input @bind="_saveLoadJson"/>
-                <button class="btn" style="float: left"@onclick="ExportToJson">[Export]</button>
-                <button class="btn" style="float: left"@onclick="ImportFromJson">[Import]"</button>
+                <input style="float: left; display: flex; margin-top: 10px" @bind="_saveLoadJson"/>
+                <button class="btn" style="float: left; display: flex; margin-top: 10px" @onclick="ExportToJson">[Export]</button>
+                <button class="btn" style="float: left; display: flex; margin-top: 10px" @onclick="ImportFromJson">[Import]</button>
                 @_importError
             </p> 
           </div>
         </div>
+
+        <div class="cardHorizontal">
+          <div class="container">
+            <button class="btn" style="float: left" @onclick="createSkill">[+]</button>
+            <p>Click to add a skill.</p> 
+          </div>
+        </div>
+
+        @foreach (string skill in _playerSheet.skills) {
+            <div class="cardHorizontal">
+                <div class="container" style="flex-direction: row; display: flex">
+                    <button class="btn" style="float: left" @onclick="() => removeSkill(skill)">[🞪]</button>
+                    <p><input @bind="@skill.skillName" style="width: 100%; margin-top: 10px"/> </p>
+                    <p><input @bind="@skill.skillLevel" style="width: 100%; margin-top: 10px" maxlength="2" inputmode="numeric"/></p>
+                </div>
+            </div>
     </div>
 </div>
 @code {
@@ -82,9 +98,17 @@
     {
         _playerSheet.aspectList.Add(new aspectclass("",""));
     }
-
     private void removeAspect(aspectclass target)
     {
         _playerSheet.aspectList.Remove(target);
+    }
+
+    private void createSkill()
+    {
+        _playerSheet.skillList.Add(new skillclass("","0"));
+    }
+    private void removeSkill(skillclass target)
+    {
+        _playerSheet.skillList.Remove(target);
     }
 }
