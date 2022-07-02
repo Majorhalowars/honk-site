@@ -6,17 +6,11 @@ namespace honksite.Shared;
 
     public class FATEsheet
     {
-        public string name = "";
-        public string description = "";
+        public string name = "Name";
+        public string description = "Write yourself a bio!";
         public Dictionary<string, int> skills = new();
         
         public List<aspectclass> aspectList = new();
-
-        public FATEsheet()
-        {
-            this.aspectList.Add(new aspectclass("High Concept Name","Describe it with a few words") );
-        }
-
     }
     public class aspectclass
     {

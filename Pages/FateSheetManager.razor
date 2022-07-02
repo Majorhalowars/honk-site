@@ -1,4 +1,4 @@
-@page "/fate-sheet"
+﻿@page "/fate-sheet"
 @using System.Text.Json
 @using honksite.Shared;
 
@@ -7,18 +7,19 @@
     <div class="leftColumn" style="flex-direction: column; display: flex; margin-right: 10px; flex: 1">
         <div class="cardHorizontal">
           <div class="container">
-            <button @onclick="createAspect">[X]</button>
-            <p>Click to add an aspect" card!</p> 
+            <button class="btn" style="float: left" @onclick="createAspect">[🞪]</button>
+            <p>Click to add an aspect card!</p> 
           </div>
         </div>
         @foreach (aspectclass anAspect in _playerSheet.aspectList) {
             <div class="cardHorizontal">
                 <div class="container" style="flex-direction: column; display: flex">
-                    <div class="container" style="flex-direction: row; display: flex">
-                        <button @onclick="() => removeAspect(anAspect)">[X]</button>
+                    <div class="container">
+                        
                         <p><input @bind="@anAspect.aspectName" style="width: 100%; margin-top: 10px"/> </p>
+                        <p><textarea @bind="@anAspect.aspectDescription" style="width: 100%; background-color: transparent; margin-bottom: 10px; box-sizing: border-box;"></textarea></p>
                     </div>
-                    <p><textarea @bind="@anAspect.aspectDescription" style="width: 100%; background-color: transparent; margin-bottom: 10px"></textarea></p>
+                    <button class="btn" style="float: left" @onclick="() => removeAspect(anAspect)">[🞪]</button>
                 </div>
             </div>
         }
@@ -35,7 +36,7 @@
           <img src="https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png">
           <div class="container">
             <input @bind="_playerSheet.name" style="width: 100%"/> 
-            <p><textarea @bind="_playerSheet.description" style="width: 100%; background-color: transparent"></textarea></p> 
+            <p><textarea @bind="_playerSheet.description" style="width: 100%; background-color: transparent; box-sizing: border-box;"></textarea></p> 
           </div>
         </div>
 
@@ -43,8 +44,8 @@
           <div class="container" style="display: flex; flex-direction: row;">
             <p>
                 <input @bind="_saveLoadJson"/>
-                <button @onclick="ExportToJson">[Export]</button>
-                <button @onclick="ImportFromJson">[Import]"</button>
+                <button class="btn" style="float: left"@onclick="ExportToJson">[Export]</button>
+                <button class="btn" style="float: left"@onclick="ImportFromJson">[Import]"</button>
                 @_importError
             </p> 
           </div>
