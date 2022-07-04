@@ -4,6 +4,19 @@
     flex: 1;
 }
 
+.ul {
+    margin: 0;
+    padding: 0
+}
+
+.li {
+    cursor: move;
+    display: block;
+    padding: 20px 10px;
+    background: white;
+    border-bottom: solid 1px gray;
+}
+
 .cardHorizontal {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
