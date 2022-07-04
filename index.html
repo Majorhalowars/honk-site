@@ -45,10 +45,10 @@
             var target = getLI(event.target);
             if (target.style['border-bottom'] !== '') {
                 target.style['border-bottom'] = '';
-                target.parentNode.insertBefore(dragging, event.target.nextSibling);
+                target.parentNode.insertBefore(dragging, event.target.closest("li"));
             } else {
                 target.style['border-top'] = '';
-                target.parentNode.insertBefore(dragging, event.target);
+                target.parentNode.insertBefore(dragging, event.target.closest("li"));
             }
         });
 
