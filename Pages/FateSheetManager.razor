@@ -67,7 +67,7 @@
         </div>
 
         <div class="stuntAndSkillContainer" style="display: flex">
-            <div class="skillContainer" style="display: flex; flex-direction: column">
+            <div class="skillContainer" style="display: flex; flex-direction: column; flex: 1">
 
                 @foreach (skillclass skill in _playerSheet.skillList) {
                     <div class="cardHorizontal">
@@ -79,7 +79,7 @@
                     </div>
                 }
             </div>
-            <div class="stuntContainer" style="display: flex; flex-direction: column">
+            <div class="stuntContainer" style="display: flex; flex-direction: column; flex: 1">
                 @foreach (stuntclass stunt in _playerSheet.stuntList) {
                     <div class="cardHorizontal">
                         <div class="container" style="flex-direction: column; display: flex">
