@@ -7,7 +7,7 @@
 .cardHorizontal {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
     margin-top: 10px;
@@ -17,7 +17,7 @@
 .cardVertical {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -32,11 +32,11 @@
 }
 .cardHorizontal > img {
     height: 100%;
-    border-radius: 5px 0 0 5px;
+    border-radius: 15px 0 0 15px;
 }
 .cardVertical > img {
     width: 100%;
-    border-radius: 5px 5px 0 0;
+    border-radius: 15px 15px 0 0;
 }
 
 .btn {
@@ -54,9 +54,17 @@
     .sheetContainer {
         flex-direction: column;
     }
+
+    .stuntAndSkillContainer {
+        flex-direction: column;
+    }
 }
 @media (min-width: 1000px) {
     .sheetContainer {
+        flex-direction: row;
+    }
+
+    .stuntAndSkillContainer {
         flex-direction: row;
     }
 }
