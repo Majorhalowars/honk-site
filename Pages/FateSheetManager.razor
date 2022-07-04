@@ -12,20 +12,20 @@
           </div>
         </div>
         <ul>
-        @foreach (aspectclass anAspect in _playerSheet.aspectList) {
-            <li>
-                <div class="cardHorizontal" draggable="true">
-                    <div class="container" style="flex-direction: column; display: flex">
-                        <div class="container">
+            @foreach (aspectclass anAspect in _playerSheet.aspectList) {
+                <li draggable="true">
+                    <div class="cardHorizontal">
+                        <div class="container" style="flex-direction: column; display: flex">
+                            <div class="container">
                         
-                            <p><input @bind="@anAspect.aspectName" style="width: 100%; margin-top: 10px"/> </p>
-                            <p><textarea @bind="@anAspect.aspectDescription" style="width: 100%; background-color: transparent; margin-bottom: 10px; box-sizing: border-box;"></textarea></p>
+                                <p><input @bind="@anAspect.aspectName" style="width: 100%; margin-top: 10px"/> </p>
+                                <p><textarea @bind="@anAspect.aspectDescription" style="width: 100%; background-color: transparent; margin-bottom: 10px; box-sizing: border-box;"></textarea></p>
+                            </div>
+                            <button class="btn" style="float: left" @onclick="() => removeAspect(anAspect)">[🞪]</button>
                         </div>
-                        <button class="btn" style="float: left" @onclick="() => removeAspect(anAspect)">[🞪]</button>
                     </div>
-                </div>
-            </li>
-        }
+                </li>
+            }
         </ul>
         <div class="cardHorizontal">
           <div class="container">
