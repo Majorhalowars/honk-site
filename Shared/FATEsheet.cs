@@ -8,7 +8,7 @@ namespace honksite.Shared;
     {
         public string name = "Name";
         public string description = "Write yourself a bio!";
-        public string characterImage = "https://cdn.discordapp.com/attachments/872160747306754058/992280957795188797/unknown.png";
+        public string characterImage = "https://cdn.discordapp.com/attachments/896631998607663124/1001967847771226112/1658670149893138.jpg";
 
         public List<skillclass> skillList = new();
         public List<aspectclass> aspectList = new();
