@@ -6,9 +6,12 @@
     </div>
 
     <div class="main">
+        @if not (navManager.Uri.Contains("fate-sheet"))
+        {
         <div class="top-row px-4">
             read<a href="https://cosmosdex.com/fortuna/p/0" target="_blank" class="ml-md-auto">[FORTUNA]</a>
         </div>
+        }
         <div>
             <article class="content px-4">
                 @Body
