@@ -2,16 +2,16 @@
 @using System.Text.Json
 @using honksite.Shared;
 
-<div class="top-row px-4" style="background-color: #f7f7f7; border-top: 2px solid #171717; border-bottom: 2px solid #171717; justify-content: flex-end; height: 3.5rem; display: flex; align-items: center; display: flex; flex-direction: row-reverse; margin: 0">
+<div class="top-row px-4" style="background-color: #f7f7f7; border-top: 2px solid #171717; border-bottom: 2px solid #171717; justify-content: flex-end; height: 3.5rem; display: flex; align-items: center; display: flex; flex-direction: row; margin: 0">
 
-    read<a href="https://cosmosdex.com/fortuna/p/0" target="_blank" class="ml-md-auto">[FORTUNA]</a>
-
-    <div class="container" style="display: flex; flex-direction: row; flex-basis: 40px; align-items: center">
+    <div class="container" style="display: flex; flex-direction: row; flex-basis: 40px; align-items: center; justify-content: flex-start">
         <input style="float: left; display: flex; margin-top: 10px" @bind="_saveLoadJson"/>
         <button class="btn" style="float: left; display: flex; margin: 10px" @onclick="ExportToJson">[Export]</button>
         <button class="btn" style="float: left; display: flex; margin: 10px" @onclick="ImportFromJson">[Import]</button>
         @_importError
     </div>
+
+    read<a href="https://cosmosdex.com/fortuna/p/0" target="_blank" class="ml-md-auto">[FORTUNA]</a>
 </div>
 
 <div class="sheetContainer">
