@@ -10,6 +10,16 @@
     <link href="css/app.css" rel="stylesheet" />
     <link href="honksite.styles.css" rel="stylesheet" />
     <script type="text/javascript">
+        function saveSheetToFile(playerName, data) {
+            var link = document.createElement('a');
+            link.download = playerName;
+            link.href = "data:application/octet-stream;base64," + data;
+            document.body.appendChild(link); // Needed for Firefox
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+    <script type="text/javascript">
 
         var dragging = null;
 
