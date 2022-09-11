@@ -1,13 +1,17 @@
 ﻿@page "/fate-sheet"
+@using System.IO
+@using System.Text
 @using System.Text.Json
 @using honksite.Shared;
+
+@inject IJSRuntime JSRuntime
 
 <div class="top-row px-4" style="background-color: #f7f7f7; border-top: 2px solid #171717; border-bottom: 2px solid #171717; justify-content: space-between; height: 3.5rem; display: flex; align-items: center; display: flex; flex-direction: row; margin: 0">
 
     <div class="container" style="display: flex; flex-direction: row; flex-basis: 40px; align-items: center; justify-content: flex-start; margin: 0">
-        <input style="float: left; display: flex; margin-top: 10px" @bind="_saveLoadJson"/>
-        <button class="btn" style="float: left; display: flex; margin: 10px" @onclick="ExportToJson">[Export]</button>
-        <button class="btn" style="float: left; display: flex; margin: 10px" @onclick="ImportFromJson">[Import]</button>
+        <button class="btn" style="float: left; display: flex; margin: 10px" @onclick="SaveSheetToFile">[Save]</button>
+        <button class="btn" style="float: left; display: flex; margin: 10px" onclick="document.getElementById('fileSheetPicker').click()">[Load]</button>
+        <InputFile id="fileSheetPicker" OnChange="LoadSheetFromFile" hidden />
         @_importError
     </div>
 
@@ -103,27 +107,48 @@
 @code {
 
     private FATEsheet _playerSheet = new();
-    
+
     private string _saveLoadJson = "";
     private string _importError = "";
 
     private static readonly JsonSerializerOptions options = new(JsonSerializerDefaults.Web) { WriteIndented = true, IncludeFields = true };
 
-    private void ExportToJson()
+    protected override async Task OnInitializedAsync()
     {
-        _saveLoadJson = JsonSerializer.Serialize(_playerSheet, typeof(FATEsheet), options);
+        string localStorageSheet = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "playerSheet");
+
+        if (!string.IsNullOrEmpty(localStorageSheet))
+        {
+            _saveLoadJson = localStorageSheet;
+            _playerSheet = JsonSerializer.Deserialize<FATEsheet>(_saveLoadJson, options);
+        }
     }
 
-    private void ImportFromJson()
+    private async void ImportFromJson()
     {
         try 
         {
             _playerSheet = JsonSerializer.Deserialize<FATEsheet>(_saveLoadJson, options);
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "playerSheet", _saveLoadJson);
         }
         catch (JsonException e) 
         {
             _importError = e.Message;
         }
+    }
+
+    private async Task LoadSheetFromFile(InputFileChangeEventArgs e)
+    {
+        Stream stream = e.File.OpenReadStream(e.File.Size);
+        _saveLoadJson = await new StreamReader(stream).ReadToEndAsync();
+        ImportFromJson();
+    }
+
+    private async void SaveSheetToFile()
+    {
+        _saveLoadJson = JsonSerializer.Serialize(_playerSheet, typeof(FATEsheet), options);
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "playerSheet", _saveLoadJson);
+        await JSRuntime.InvokeVoidAsync("saveSheetToFile", "FATE_" + _playerSheet.name + ".txt", Convert.ToBase64String(Encoding.ASCII.GetBytes(_saveLoadJson)));
     }
 
     private void createAspect()
